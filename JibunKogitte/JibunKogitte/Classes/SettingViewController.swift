@@ -13,13 +13,26 @@ class SettingViewController: BaseViewController,UITableViewDelegate,UITableViewD
     
     @IBOutlet weak var profileImageView: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // ユーザー情報を取得し、反映する
-    }
-
+    var userInfos = Array<AnyObject>()
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // ユーザー情報を取得し、反映する
+        
+        // 写真を取得して表示する
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
+        fetchRequest.entity = entity
+        do {
+            let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
+            if pictures.count > 0 {
+                let picture = pictures[pictures.count - 1] as MyCheckData
+                let profileImage = UIImage(data: picture.profileImage!)
+                self.profileImageView.image = profileImage
+            }
+        } catch {
+        } 
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -35,7 +48,7 @@ class SettingViewController: BaseViewController,UITableViewDelegate,UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return userInfos.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

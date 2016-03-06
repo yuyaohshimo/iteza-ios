@@ -57,7 +57,7 @@ class BaseModel:NSObject,NSURLSessionDelegate {
                 handler(response: responseDict, error: error)
             }
         }
-        
+        // 通信開始
         dataTask.resume()
         
     }
