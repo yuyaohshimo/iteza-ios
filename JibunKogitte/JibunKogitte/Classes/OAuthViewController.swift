@@ -12,6 +12,8 @@ class OAuthViewController: BaseViewController,UIWebViewDelegate {
     
     @IBOutlet weak var authWebView: UIWebView!
     
+    var isInitialRegister = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,8 +26,7 @@ class OAuthViewController: BaseViewController,UIWebViewDelegate {
         
     }
     
-    
-    // MARK: -UIWebViewDelegate
+    // MARK: - UIWebViewDelegate
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         print("error")
     }
@@ -43,12 +44,21 @@ class OAuthViewController: BaseViewController,UIWebViewDelegate {
                         let access_token = item?.stringByReplacingOccurrencesOfString("access_token=", withString: "")
                         CommonProcess.keychainSave("access_token", data: (access_token?.dataUsingEncoding(NSUTF8StringEncoding))!)
                         // Viewを閉じる
-                        dismissViewControllerAnimated(true, completion: nil)
+                        if isInitialRegister == true {
+                            performSegueWithIdentifier(SegueInitialRegieterProfile, sender: nil)
+                        } else {
+                            dismissViewControllerAnimated(true, completion: nil)
+                        }
                     }
                 }
             }
         }
         
     }
+    
 
+    @IBAction func pressCloseButton(sender: UIButton) {
+        // Viewを閉じる
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

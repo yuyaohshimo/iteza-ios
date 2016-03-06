@@ -9,15 +9,19 @@
 import UIKit
 import MobileCoreServices
 
+
 class BaseViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     // Segue名
     let SegueShowSettings = "showSettings"
     let SegueInputAmount = "inputAmount"
     let SegueSettings = "Settings"
+    let SegueInitialRegieterProfile = "initialRegieterProfile"
     
     // ViewController名
-    let OAuthViewController = "OAuthViewController"
+    let VcOAuthViewController = "OAuthViewController"
+    let VcRegisterUserImageViewController = "RegisterUserImageViewController"
+    let VcOAuthNavigationViewController = "OAuthNavigationViewController"
     
     // StotyBoard名
     let MainStoryBoard = "Main"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HJ8-z1-vNi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OfZ-eq-CLO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -18,28 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="顔写真を登録してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTl-gD-AZs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顔写真を登録してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTl-gD-AZs">
                                 <rect key="frame" x="198" y="115" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Y7-0f-ivC">
-                                <rect key="frame" x="157" y="203" width="287" height="183"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Y7-0f-ivC">
+                                <rect key="frame" x="200" y="166" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UYU-h1-xTv"/>
+                                    <constraint firstAttribute="height" constant="200" id="tWq-mA-nI8"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc4-6G-UHV">
+                                <rect key="frame" x="248" y="447" width="105" height="30"/>
+                                <state key="normal" title="これで登録する"/>
+                                <connections>
+                                    <action selector="pressRegister:" destination="VFr-BI-wQm" eventType="touchUpInside" id="Nnw-OZ-XDi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Y7-0f-ivC" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="1mu-jN-dQV"/>
+                            <constraint firstItem="OHk-gd-a9W" firstAttribute="top" secondItem="Wc4-6G-UHV" secondAttribute="bottom" constant="123" id="FyM-Lp-3Vu"/>
+                            <constraint firstItem="Wc4-6G-UHV" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="VTW-ol-UAP"/>
+                            <constraint firstItem="DTl-gD-AZs" firstAttribute="top" secondItem="cqO-I5-dWg" secondAttribute="bottom" constant="51" id="gYM-XH-Aik"/>
+                            <constraint firstItem="8Y7-0f-ivC" firstAttribute="top" secondItem="DTl-gD-AZs" secondAttribute="bottom" constant="30" id="hYm-zh-fgL"/>
+                            <constraint firstItem="DTl-gD-AZs" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="sJl-ub-von"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ezj-KS-734">
-                        <barButtonItem key="rightBarButtonItem" title="閉じる" id="4wV-nS-usw"/>
+                        <barButtonItem key="rightBarButtonItem" id="4wV-nS-usw"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="8LV-Ks-bc9" kind="presentation" identifier="initialOAuth" id="oU8-12-ttX"/>
+                        <outlet property="profileImageView" destination="8Y7-0f-ivC" id="PXC-iN-PKt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3J-V3-rtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765" y="-106"/>
+            <point key="canvasLocation" x="1276" y="-842"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="yg3-mi-r0n">
@@ -54,43 +73,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSI-OT-GYB">
-                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <rect key="frame" x="20" y="72" width="560" height="428"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFW-1D-vEq">
+                                <rect key="frame" x="263" y="531" width="75" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="キャンセル"/>
+                                <connections>
+                                    <action selector="pressCloseButton:" destination="8LV-Ks-bc9" eventType="touchUpInside" id="MVu-JP-h95"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="vSI-OT-GYB" secondAttribute="trailing" id="3vy-zu-aNk"/>
                             <constraint firstItem="vSI-OT-GYB" firstAttribute="top" secondItem="Ctw-1M-F5A" secondAttribute="bottom" constant="8" symbolic="YES" id="90D-l0-nk4"/>
-                            <constraint firstItem="XQi-qe-SKD" firstAttribute="top" secondItem="vSI-OT-GYB" secondAttribute="bottom" constant="8" symbolic="YES" id="IHK-p6-4IQ"/>
+                            <constraint firstItem="XQi-qe-SKD" firstAttribute="top" secondItem="vSI-OT-GYB" secondAttribute="bottom" constant="100" id="IHK-p6-4IQ"/>
                             <constraint firstItem="vSI-OT-GYB" firstAttribute="leading" secondItem="QJg-aq-Djv" secondAttribute="leadingMargin" id="VI8-hH-wQx"/>
+                            <constraint firstItem="XQi-qe-SKD" firstAttribute="top" secondItem="AFW-1D-vEq" secondAttribute="bottom" constant="39" id="Z6J-q7-fZ6"/>
+                            <constraint firstItem="AFW-1D-vEq" firstAttribute="centerX" secondItem="QJg-aq-Djv" secondAttribute="centerX" id="meI-7g-jBA"/>
+                            <constraint firstItem="AFW-1D-vEq" firstAttribute="top" secondItem="vSI-OT-GYB" secondAttribute="bottom" constant="31" id="nI7-hn-dIg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0A1-97-9JE"/>
                     <connections>
                         <outlet property="authWebView" destination="vSI-OT-GYB" id="Lkq-FL-OkA"/>
+                        <segue destination="VFr-BI-wQm" kind="show" identifier="initialRegieterProfile" id="juX-x7-NXU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBJ-Kj-2rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1427" y="-87"/>
+            <point key="canvasLocation" x="538" y="-860"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="UeL-IS-xso">
+        <scene sceneID="tVC-4s-HZJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HJ8-z1-vNi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="OAuthNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="OfZ-eq-CLO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZWq-fj-L1t">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ln2-fh-5ia">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VFr-BI-wQm" kind="relationship" relationship="rootViewController" id="yuS-7V-Cn7"/>
+                        <segue destination="8LV-Ks-bc9" kind="relationship" relationship="rootViewController" id="dcc-UJ-8PV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v3K-qW-q8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PeC-NL-FGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125" y="-106"/>
+            <point key="canvasLocation" x="-196" y="-860"/>
         </scene>
     </scenes>
 </document>

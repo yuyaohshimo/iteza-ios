@@ -16,14 +16,13 @@ class BaseModel:NSObject,NSURLSessionDelegate {
         case GET
     }
     
-    let urlString:String?           // URL
-    let requestMethod:Method?       // POSTor GET
+    var urlString:String?           // URL
+    var requestMethod:Method?       // POST or GET
     
     // MARK: - 初期処理
-    init(url:String, method:Method) {
-        urlString = url
-        requestMethod = method
-        super.init()
+    override init() {
+        urlString = ""
+        requestMethod = .GET
     }
     
     // MARK: - データ送信処理

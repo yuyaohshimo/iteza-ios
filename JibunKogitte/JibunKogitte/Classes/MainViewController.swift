@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
 
@@ -17,19 +18,50 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
     // MARK: - View読み込み時の処理
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // ユーザー登録してあれば、お札を表示
-        let access_token = CommonProcess.keychainLoad("access_token")
-        if (access_token != nil) {
-            let access_tokenString = String(data: access_token!, encoding: NSUTF8StringEncoding)
-            print(access_tokenString)
-        } else {
-            // なければ、OAuth画面へ遷移する
-            let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(OAuthViewController)
-            presentViewController(vc, animated: true, completion: nil)
-        }
         
+        // ユーザー登録してあれば、お札を表示
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
+        fetchRequest.entity = entity
+        do {
+            let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
+            if pictures.count > 0 {
+                let picture = pictures[pictures.count - 1] as MyCheckData
+                let profileImage = UIImage(data: picture.profileImage!)
+                self.userImageView.image = profileImage
+            } else {
+                // なければ、OAuth画面へ遷移する
+                let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthNavigationViewController) as! UINavigationController
+                let oAthVC = vc.visibleViewController as! OAuthViewController
+                oAthVC.isInitialRegister = true
+                presentViewController(vc, animated: true, completion:nil)
+
+            }
+        } catch {
+            let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthViewController) as! OAuthViewController
+            vc.isInitialRegister = true
+            presentViewController(vc, animated: true, completion:nil)
+        }
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 画像を変更しておく
+        let fetchRequest = NSFetchRequest()
+        let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
+        fetchRequest.entity = entity
+        do {
+            let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
+            if pictures.count > 0 {
+                let picture = pictures[pictures.count - 1] as MyCheckData
+                let profileImage = UIImage(data: picture.profileImage!)
+                self.userImageView.image = profileImage
+            }
+        } catch {
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

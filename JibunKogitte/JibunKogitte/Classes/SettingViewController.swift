@@ -7,21 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class SettingViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var profileImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // ユーザー情報を取得し、反映する
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     
     // MARK: - Navigation
@@ -47,14 +43,6 @@ class SettingViewController: BaseViewController,UITableViewDelegate,UITableViewD
         return cell
     }
     
-    // MARK: - 画面回転
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return .Portrait
-    }
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
-
     @IBAction func pressChangePicture(sender: UIButton) {
         
         // 写真を変更する
@@ -75,6 +63,21 @@ class SettingViewController: BaseViewController,UITableViewDelegate,UITableViewD
         picker.dismissViewControllerAnimated(true) { () -> Void in
             // 写真を変更
             self.profileImageView.image = image
+
+            // 写真をCoreDataに追加
+            let fetchRequest = NSFetchRequest()
+            let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
+            fetchRequest.entity = entity
+            do {
+                let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
+                if pictures.count > 0 {
+                    let picture = pictures[0] as MyCheckData
+                    picture.profileImage = UIImagePNGRepresentation(image)
+                    try CoreDataManager.sharedInstance.managedObjectContext.save()
+                }
+            } catch {
+                fatalError("Failed to fetch employees: \(error)")
+            }
         }
     }
 }

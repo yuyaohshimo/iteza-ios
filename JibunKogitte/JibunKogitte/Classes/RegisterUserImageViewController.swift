@@ -7,24 +7,67 @@
 //
 
 import UIKit
-
-
+import CoreData
 
 class RegisterUserImageViewController: BaseViewController {
+    
+    lazy var profileImage:UIImage = UIImage()
 
+    @IBOutlet weak var profileImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // ユーザーがなければ
-        performSegueWithIdentifier("initialOAuth", sender: nil)
+        
+       
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (self.profileImageView.image == nil) {
+            // 写真を変更する
+            let alertController = UIAlertController(title: "写真を設定", message: nil, preferredStyle: .ActionSheet)
+            alertController.addAction(UIAlertAction(title: "新しい写真を撮る", style: .Default, handler: { (action) -> Void in
+                self.presentImagePickerViewController(UIImagePickerControllerSourceType.Camera)
+            }))
+            alertController.addAction(UIAlertAction(title: "保存済みの写真を選択", style: .Default, handler: { (action) -> Void in
+                self.presentImagePickerViewController(UIImagePickerControllerSourceType.PhotoLibrary)
+            }))
+            alertController.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+       
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        // 写真を変更
+        self.profileImage = image
+        self.profileImageView.image = image
+        
+        picker.dismissViewControllerAnimated(true) { () -> Void in
 
+        }
+    }
+
+    @IBAction func pressRegister(sender: UIButton) {
+        // 写真をCoreDataに追加
+        let newPicture = NSEntityDescription.insertNewObjectForEntityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext) as? MyCheckData
+        if (newPicture != nil) {
+            newPicture!.profileImage = UIImagePNGRepresentation(self.profileImage)
+            do {
+                try CoreDataManager.sharedInstance.managedObjectContext.save()
+            
+                self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+            } catch {
+                
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
