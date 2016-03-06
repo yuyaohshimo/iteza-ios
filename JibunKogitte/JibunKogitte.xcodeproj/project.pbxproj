@@ -8,20 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		8E1171B71C899134003806A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1171B61C899134003806A5 /* AppDelegate.swift */; };
-		8E1171B91C899134003806A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1171B81C899134003806A5 /* ViewController.swift */; };
 		8E1171BC1C899134003806A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1171BA1C899134003806A5 /* Main.storyboard */; };
 		8E1171BE1C899134003806A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1171BD1C899134003806A5 /* Assets.xcassets */; };
 		8E1171C11C899134003806A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1171BF1C899134003806A5 /* LaunchScreen.storyboard */; };
+		8E4131FB1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4131FA1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift */; };
+		8E4131FD1C8A8E4500FDD0EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4131FC1C8A8E4500FDD0EF /* MainViewController.swift */; };
+		8E4132001C8A8EAD00FDD0EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4131FE1C8A8EAD00FDD0EF /* Settings.storyboard */; };
+		8E4132021C8A8F2300FDD0EF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132011C8A8F2300FDD0EF /* SettingViewController.swift */; };
+		8E41320D1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41320C1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift */; };
+		8E4132101C8B0E6C00FDD0EF /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */; };
+		8E4132121C8B19AC00FDD0EF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132111C8B19AC00FDD0EF /* BaseModel.swift */; };
+		8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */; };
+		8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132171C8C005600FDD0EF /* OAuthViewController.swift */; };
+		8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132191C8C146300FDD0EF /* CommontProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E1171B31C899134003806A5 /* JibunKogitte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JibunKogitte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1171B61C899134003806A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E1171B81C899134003806A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E1171BB1C899134003806A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E1171BD1C899134003806A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E1171C01C899134003806A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E1171C21C899134003806A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E4131FA1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudOceanNumericKeypadViewController.swift; path = Classes/CloudOceanNumericKeypadViewController.swift; sourceTree = "<group>"; };
+		8E4131FC1C8A8E4500FDD0EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/MainViewController.swift; sourceTree = "<group>"; };
+		8E4131FF1C8A8EAD00FDD0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		8E4132011C8A8F2300FDD0EF /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Classes/SettingViewController.swift; sourceTree = "<group>"; };
+		8E41320C1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterUserImageViewController.swift; path = Classes/RegisterUserImageViewController.swift; sourceTree = "<group>"; };
+		8E41320F1C8B0E6C00FDD0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
+		8E4132111C8B19AC00FDD0EF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModel.swift; path = Classes/BaseModel.swift; sourceTree = "<group>"; };
+		8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Classes/BaseViewController.swift; sourceTree = "<group>"; };
+		8E4132171C8C005600FDD0EF /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthViewController.swift; path = Classes/OAuthViewController.swift; sourceTree = "<group>"; };
+		8E4132191C8C146300FDD0EF /* CommontProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommontProcess.swift; path = Classes/CommontProcess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,63 @@
 		8E1171B51C899134003806A5 /* JibunKogitte */ = {
 			isa = PBXGroup;
 			children = (
+				8E4131F41C8A8D4A00FDD0EF /* Controller */,
+				8E4131F61C8A8D6500FDD0EF /* Model */,
+				8E4132071C8AC67400FDD0EF /* Utility */,
+				8E4131F71C8A8D6A00FDD0EF /* View */,
 				8E1171B61C899134003806A5 /* AppDelegate.swift */,
-				8E1171B81C899134003806A5 /* ViewController.swift */,
 				8E1171BA1C899134003806A5 /* Main.storyboard */,
+				8E4131FE1C8A8EAD00FDD0EF /* Settings.storyboard */,
+				8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */,
 				8E1171BD1C899134003806A5 /* Assets.xcassets */,
 				8E1171BF1C899134003806A5 /* LaunchScreen.storyboard */,
 				8E1171C21C899134003806A5 /* Info.plist */,
 			);
 			path = JibunKogitte;
+			sourceTree = "<group>";
+		};
+		8E4131F41C8A8D4A00FDD0EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E4131F51C8A8D5A00FDD0EF /* ViewController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8E4131F51C8A8D5A00FDD0EF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E4131FA1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift */,
+				8E4131FC1C8A8E4500FDD0EF /* MainViewController.swift */,
+				8E4132011C8A8F2300FDD0EF /* SettingViewController.swift */,
+				8E41320C1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift */,
+				8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */,
+				8E4132171C8C005600FDD0EF /* OAuthViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		8E4131F61C8A8D6500FDD0EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E4132111C8B19AC00FDD0EF /* BaseModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8E4131F71C8A8D6A00FDD0EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8E4132071C8AC67400FDD0EF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8E4132191C8C146300FDD0EF /* CommontProcess.swift */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +157,9 @@
 		8E1171AB1C899134003806A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Settings,
+				);
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = KOMS;
@@ -126,6 +196,8 @@
 				8E1171C11C899134003806A5 /* LaunchScreen.storyboard in Resources */,
 				8E1171BE1C899134003806A5 /* Assets.xcassets in Resources */,
 				8E1171BC1C899134003806A5 /* Main.storyboard in Resources */,
+				8E4132001C8A8EAD00FDD0EF /* Settings.storyboard in Resources */,
+				8E4132101C8B0E6C00FDD0EF /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +208,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1171B91C899134003806A5 /* ViewController.swift in Sources */,
+				8E4132121C8B19AC00FDD0EF /* BaseModel.swift in Sources */,
+				8E41320D1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift in Sources */,
+				8E4131FD1C8A8E4500FDD0EF /* MainViewController.swift in Sources */,
 				8E1171B71C899134003806A5 /* AppDelegate.swift in Sources */,
+				8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */,
+				8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */,
+				8E4131FB1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift in Sources */,
+				8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */,
+				8E4132021C8A8F2300FDD0EF /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +237,22 @@
 				8E1171C01C899134003806A5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8E4131FE1C8A8EAD00FDD0EF /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E4131FF1C8A8EAD00FDD0EF /* Base */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
+		8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E41320F1C8B0E6C00FDD0EF /* Base */,
+			);
+			name = Register.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -289,6 +384,7 @@
 				8E1171C71C899134003806A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
