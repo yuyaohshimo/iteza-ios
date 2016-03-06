@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HJ8-z1-vNi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register User Image View Controller-->
+        <scene sceneID="DMh-tR-CoO">
+            <objects>
+                <viewController storyboardIdentifier="RegisterUserImageViewController" id="VFr-BI-wQm" customClass="RegisterUserImageViewController" customModule="JibunKogitte" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cqO-I5-dWg"/>
+                        <viewControllerLayoutGuide type="bottom" id="OHk-gd-a9W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Bs-9y-vQu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="顔写真を登録してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTl-gD-AZs">
+                                <rect key="frame" x="198" y="115" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Y7-0f-ivC">
+                                <rect key="frame" x="157" y="203" width="287" height="183"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ezj-KS-734">
+                        <barButtonItem key="rightBarButtonItem" title="閉じる" id="4wV-nS-usw"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="8LV-Ks-bc9" kind="presentation" identifier="initialOAuth" id="oU8-12-ttX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3J-V3-rtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765" y="-106"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="yg3-mi-r0n">
+            <objects>
+                <viewController storyboardIdentifier="OAuthViewController" id="8LV-Ks-bc9" customClass="OAuthViewController" customModule="JibunKogitte" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ctw-1M-F5A"/>
+                        <viewControllerLayoutGuide type="bottom" id="XQi-qe-SKD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QJg-aq-Djv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSI-OT-GYB">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vSI-OT-GYB" secondAttribute="trailing" id="3vy-zu-aNk"/>
+                            <constraint firstItem="vSI-OT-GYB" firstAttribute="top" secondItem="Ctw-1M-F5A" secondAttribute="bottom" constant="8" symbolic="YES" id="90D-l0-nk4"/>
+                            <constraint firstItem="XQi-qe-SKD" firstAttribute="top" secondItem="vSI-OT-GYB" secondAttribute="bottom" constant="8" symbolic="YES" id="IHK-p6-4IQ"/>
+                            <constraint firstItem="vSI-OT-GYB" firstAttribute="leading" secondItem="QJg-aq-Djv" secondAttribute="leadingMargin" id="VI8-hH-wQx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authWebView" destination="vSI-OT-GYB" id="Lkq-FL-OkA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBJ-Kj-2rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1427" y="-87"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UeL-IS-xso">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HJ8-z1-vNi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZWq-fj-L1t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VFr-BI-wQm" kind="relationship" relationship="rootViewController" id="yuS-7V-Cn7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3K-qW-q8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125" y="-106"/>
+        </scene>
+    </scenes>
+</document>

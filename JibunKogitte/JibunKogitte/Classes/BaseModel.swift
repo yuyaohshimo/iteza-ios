@@ -1,0 +1,66 @@
+//
+//  BaseModel.swift
+//  JibunKogitte
+//
+//  Created by 梶嶋 佐知子 on 2016/03/05.
+//  Copyright © 2016年 KOMS. All rights reserved.
+//
+
+import Foundation
+
+class BaseModel:NSObject,NSURLSessionDelegate {
+    
+    // POSTかGETか
+    enum Method :Int {
+        case POST
+        case GET
+    }
+    
+    let urlString:String?           // URL
+    let requestMethod:Method?       // POSTor GET
+    
+    // MARK: - 初期処理
+    init(url:String, method:Method) {
+        urlString = url
+        requestMethod = method
+        super.init()
+    }
+    
+    // MARK: - データ送信処理
+    func startConnection (parameter:Dictionary<String,String>,handler:(response:Dictionary<String,AnyObject>,error:NSError?)->Void) -> Void {
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        var request:NSMutableURLRequest?
+        
+        // パラメータを付加する
+        var postString:String = ""
+        for (key,value) in parameter {
+            postString = postString + ("\(key) = \(value)")
+        }
+        // POSTの場合とそれ以外の場合で処理わけ
+        if (requestMethod == .POST) {
+            request = NSMutableURLRequest(URL: NSURL(string: urlString!)!)
+            request!.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            request!.HTTPMethod = "POST"
+        } else {
+            request = NSMutableURLRequest(URL: NSURL(string: urlString! + postString)!)
+        }
+        
+        let dataTask = session.dataTaskWithRequest(request!) { (data, response, error) -> Void in
+            // レスポンスが返却されてきた時の処理
+            var responseDict = Dictionary<String,AnyObject>()
+            if (data != nil) {
+                do {
+                    responseDict = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.init(rawValue: 0)) as! Dictionary<String, AnyObject>
+                    
+                } catch {
+                }
+                // レスポンスを通知
+                handler(response: responseDict, error: error)
+            }
+        }
+        
+        dataTask.resume()
+        
+    }
+    
+}
