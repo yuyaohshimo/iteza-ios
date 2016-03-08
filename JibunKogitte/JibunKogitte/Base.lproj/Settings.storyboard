@@ -35,7 +35,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -77,6 +77,7 @@
                             <constraint firstItem="hqJ-kZ-weJ" firstAttribute="top" secondItem="hxc-Cd-AYU" secondAttribute="bottom" constant="20" id="qJZ-WY-8WT"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="profileImageView" destination="hxc-Cd-AYU" id="Nho-J7-BQO"/>
                     </connections>

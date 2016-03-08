@@ -25,16 +25,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="520"/>
                                         <color key="backgroundColor" red="0.87502181530000001" green="1" blue="0.78385126589999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICH-xI-PGz">
-                                        <rect key="frame" x="30" y="196" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三菱東京UFJ銀行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzB-J0-JbJ">
                                         <rect key="frame" x="30" y="31" width="132" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-mT-ZQo">
@@ -59,7 +53,6 @@
                                 <constraints>
                                     <constraint firstItem="1Sd-Dr-3F9" firstAttribute="top" secondItem="4bj-Wl-Qd3" secondAttribute="bottom" constant="-166" id="1WL-ib-fqp"/>
                                     <constraint firstItem="hiW-mT-ZQo" firstAttribute="top" secondItem="PzB-J0-JbJ" secondAttribute="bottom" constant="59" id="Hut-6T-vHT"/>
-                                    <constraint firstItem="ICH-xI-PGz" firstAttribute="top" secondItem="hiW-mT-ZQo" secondAttribute="bottom" constant="52" id="IRr-5L-POc"/>
                                     <constraint firstAttribute="trailing" secondItem="4bj-Wl-Qd3" secondAttribute="trailing" constant="14" id="Ttg-eB-kSg"/>
                                     <constraint firstItem="1Sd-Dr-3F9" firstAttribute="height" secondItem="a3Y-Sv-PdF" secondAttribute="height" id="Ufh-Tb-mFv"/>
                                     <constraint firstItem="1Sd-Dr-3F9" firstAttribute="width" secondItem="a3Y-Sv-PdF" secondAttribute="width" id="V52-q6-PdC"/>
@@ -68,7 +61,6 @@
                                     <constraint firstItem="1Sd-Dr-3F9" firstAttribute="centerX" secondItem="a3Y-Sv-PdF" secondAttribute="centerX" id="foI-fN-2xx"/>
                                     <constraint firstItem="PzB-J0-JbJ" firstAttribute="top" secondItem="a3Y-Sv-PdF" secondAttribute="top" constant="31" id="i9d-n5-yEX"/>
                                     <constraint firstItem="PzB-J0-JbJ" firstAttribute="leading" secondItem="a3Y-Sv-PdF" secondAttribute="leading" constant="30" id="n3s-XL-DAP"/>
-                                    <constraint firstItem="ICH-xI-PGz" firstAttribute="leading" secondItem="PzB-J0-JbJ" secondAttribute="leading" id="skd-Xx-MwB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -320,6 +312,24 @@
             </objects>
             <point key="canvasLocation" x="832" y="841"/>
         </scene>
+        <!--My Check View Controller-->
+        <scene sceneID="doC-KI-eE0">
+            <objects>
+                <viewController storyboardIdentifier="MyCheckViewController" id="leM-8g-cn8" customClass="MyCheckViewController" customModule="JibunKogitte" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xQ4-Z5-eUe"/>
+                        <viewControllerLayoutGuide type="bottom" id="aji-yg-x3i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ERE-Nu-piC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0So-0I-dbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="1245"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="f2b-JD-PCc">
             <objects>
@@ -337,7 +347,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ot-cp-1xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="-80"/>
+            <point key="canvasLocation" x="-151" y="-48"/>
         </scene>
     </scenes>
 </document>

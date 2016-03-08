@@ -16,6 +16,7 @@ class BaseModel:NSObject,NSURLSessionDelegate {
         case GET
     }
     
+    let urlBaseString = "http://"
     var urlString:String?           // URL
     var requestMethod:Method?       // POST or GET
     

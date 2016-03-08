@@ -92,6 +92,14 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
         }
         
     }
+    // MARK:回転検知
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        
+        if size.width > size.height {
+            // 横向きだった場合,ViewControllerを変更する
+          
+        }
+    }
         
     // MARK: - CloudOceanNumericKeypadDelegate
     func enterValue(intValue: Int) {
@@ -99,9 +107,6 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
         self.amountButton.setTitle("¥ \(intValue)", forState: .Normal)
     }
     
-    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-        
-    }
 }
 
 

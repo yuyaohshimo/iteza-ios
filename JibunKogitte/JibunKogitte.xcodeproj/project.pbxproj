@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */; };
 		8E1171B71C899134003806A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1171B61C899134003806A5 /* AppDelegate.swift */; };
 		8E1171BC1C899134003806A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1171BA1C899134003806A5 /* Main.storyboard */; };
 		8E1171BE1C899134003806A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1171BD1C899134003806A5 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */; };
 		8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132171C8C005600FDD0EF /* OAuthViewController.swift */; };
 		8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132191C8C146300FDD0EF /* CommontProcess.swift */; };
+		8E44C0E81C8C7C3900E9561A /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44C0E71C8C7C3900E9561A /* UserInfoModel.swift */; };
 		8EFA0CB81C8C2F6500BEF641 /* MyCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CB61C8C2F6500BEF641 /* MyCheck.xcdatamodeld */; };
 		8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */; };
 		8EFA0CC01C8C307300BEF641 /* MyCheckInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CBF1C8C307300BEF641 /* MyCheckInfoModel.swift */; };
@@ -29,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckViewController.swift; path = Classes/MyCheckViewController.swift; sourceTree = "<group>"; };
 		8E1171B31C899134003806A5 /* JibunKogitte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JibunKogitte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1171B61C899134003806A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E1171BB1C899134003806A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Classes/BaseViewController.swift; sourceTree = "<group>"; };
 		8E4132171C8C005600FDD0EF /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthViewController.swift; path = Classes/OAuthViewController.swift; sourceTree = "<group>"; };
 		8E4132191C8C146300FDD0EF /* CommontProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommontProcess.swift; path = Classes/CommontProcess.swift; sourceTree = "<group>"; };
+		8E44C0E71C8C7C3900E9561A /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoModel.swift; path = Classes/UserInfoModel.swift; sourceTree = "<group>"; };
 		8EFA0CB71C8C2F6500BEF641 /* MyCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCheck.xcdatamodel; sourceTree = "<group>"; };
 		8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Classes/CoreDataManager.swift; sourceTree = "<group>"; };
 		8EFA0CBF1C8C307300BEF641 /* MyCheckInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckInfoModel.swift; path = Classes/MyCheckInfoModel.swift; sourceTree = "<group>"; };
@@ -87,9 +91,6 @@
 				8E4132071C8AC67400FDD0EF /* Utility */,
 				8E4131F71C8A8D6A00FDD0EF /* View */,
 				8E1171B61C899134003806A5 /* AppDelegate.swift */,
-				8E1171BA1C899134003806A5 /* Main.storyboard */,
-				8E4131FE1C8A8EAD00FDD0EF /* Settings.storyboard */,
-				8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */,
 				8EFA0CB61C8C2F6500BEF641 /* MyCheck.xcdatamodeld */,
 				8E1171BD1C899134003806A5 /* Assets.xcassets */,
 				8E1171BF1C899134003806A5 /* LaunchScreen.storyboard */,
@@ -111,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4131FA1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift */,
+				8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */,
 				8E4131FC1C8A8E4500FDD0EF /* MainViewController.swift */,
 				8E4132011C8A8F2300FDD0EF /* SettingViewController.swift */,
 				8E41320C1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift */,
@@ -126,6 +128,10 @@
 				8EFA0CE21C8C383800BEF641 /* CoreDataModel */,
 				8E4132111C8B19AC00FDD0EF /* BaseModel.swift */,
 				8EFA0CBF1C8C307300BEF641 /* MyCheckInfoModel.swift */,
+				8E44C0E71C8C7C3900E9561A /* UserInfoModel.swift */,
+				8E1171BA1C899134003806A5 /* Main.storyboard */,
+				8E4131FE1C8A8EAD00FDD0EF /* Settings.storyboard */,
+				8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -240,6 +246,8 @@
 				8E1171B71C899134003806A5 /* AppDelegate.swift in Sources */,
 				8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */,
 				8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */,
+				8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */,
+				8E44C0E81C8C7C3900E9561A /* UserInfoModel.swift in Sources */,
 				8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */,
 				8E4131FB1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift in Sources */,
 				8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */,
