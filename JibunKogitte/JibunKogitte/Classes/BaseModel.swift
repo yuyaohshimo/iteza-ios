@@ -44,7 +44,9 @@ class BaseModel:NSObject,NSURLSessionDelegate {
         } else {
             request = NSMutableURLRequest(URL: NSURL(string: urlString! + postString)!)
         }
-        
+        let access_token = NSString(data: CommonProcess.keychainLoad("access-token")!, encoding:NSUTF8StringEncoding)
+        CommonProcess.keychainLoad("access-token")
+        request?.allHTTPHeaderFields = ["Authorization":access_token! as String]
         let dataTask = session.dataTaskWithRequest(request!) { (data, response, error) -> Void in
             // レスポンスが返却されてきた時の処理
             var responseDict = Dictionary<String,AnyObject>()

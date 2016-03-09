@@ -11,31 +11,36 @@ import CoreData
 
 class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
 
-    @IBOutlet weak var bankNameLabel: UILabel!
-    @IBOutlet weak var amountButton: UIButton!
-    @IBOutlet weak var userImageView: UIImageView!
     
     // MARK: - View読み込み時の処理
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // ユーザー登録してあれば、お札を表示
+        // ユーザー登録してあれば、電卓画面を表示
         let fetchRequest = NSFetchRequest()
         let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
         fetchRequest.entity = entity
         do {
             let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
-            if pictures.count > 0 {
-                let picture = pictures[pictures.count - 1] as MyCheckData
-                let profileImage = UIImage(data: picture.profileImage!)
-                self.userImageView.image = profileImage
-            } else {
+            if pictures.count == 0 {
                 // なければ、OAuth画面へ遷移する
                 let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthNavigationViewController) as! UINavigationController
                 let oAthVC = vc.visibleViewController as! OAuthViewController
                 oAthVC.isInitialRegister = true
                 presentViewController(vc, animated: true, completion:nil)
 
+            } else {
+                let fetchRequest = NSFetchRequest()
+                let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
+                fetchRequest.entity = entity
+                do {
+                    let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
+                    if pictures.count > 0 {
+                        let vc = storyboard!.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
+                        presentViewController(vc, animated: false, completion: nil)
+                    }
+                } catch {
+                }
             }
         } catch {
             let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthViewController) as! OAuthViewController
@@ -47,19 +52,18 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        // 画像を変更しておく
-        let fetchRequest = NSFetchRequest()
+        // ユーザ登録されていれば電卓を表示する
+        /*let fetchRequest = NSFetchRequest()
         let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
         fetchRequest.entity = entity
         do {
             let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
             if pictures.count > 0 {
-                let picture = pictures[pictures.count - 1] as MyCheckData
-                let profileImage = UIImage(data: picture.profileImage!)
-                self.userImageView.image = profileImage
+                let vc = storyboard.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
+                presentViewController(vc, animated: false, completion: nil)
             }
         } catch {
-        }
+        }*/
     }
     
 
@@ -104,7 +108,7 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
     // MARK: - CloudOceanNumericKeypadDelegate
     func enterValue(intValue: Int) {
         // ボタンのタイトルに反映
-        self.amountButton.setTitle("¥ \(intValue)", forState: .Normal)
+        
     }
     
 }

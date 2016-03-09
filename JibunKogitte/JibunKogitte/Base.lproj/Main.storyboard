@@ -20,48 +20,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3Y-Sv-PdF">
                                 <rect key="frame" x="20" y="72" width="560" height="520"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Sd-Dr-3F9">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="520"/>
-                                        <color key="backgroundColor" red="0.87502181530000001" green="1" blue="0.78385126589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三菱東京UFJ銀行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzB-J0-JbJ">
-                                        <rect key="frame" x="30" y="31" width="132" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-mT-ZQo">
-                                        <rect key="frame" x="30" y="111" width="56" height="33"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="¥1,000">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="OQg-Oa-JAU" kind="presentation" identifier="inputAmount" id="Ase-Fn-CKd"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4bj-Wl-Qd3">
-                                        <rect key="frame" x="396" y="16" width="150" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="4Oh-U2-INz"/>
-                                            <constraint firstAttribute="width" constant="150" id="x4l-r4-9AI"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.87502181530000001" green="1" blue="0.78385126589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="1Sd-Dr-3F9" firstAttribute="top" secondItem="4bj-Wl-Qd3" secondAttribute="bottom" constant="-166" id="1WL-ib-fqp"/>
-                                    <constraint firstItem="hiW-mT-ZQo" firstAttribute="top" secondItem="PzB-J0-JbJ" secondAttribute="bottom" constant="59" id="Hut-6T-vHT"/>
-                                    <constraint firstAttribute="trailing" secondItem="4bj-Wl-Qd3" secondAttribute="trailing" constant="14" id="Ttg-eB-kSg"/>
-                                    <constraint firstItem="1Sd-Dr-3F9" firstAttribute="height" secondItem="a3Y-Sv-PdF" secondAttribute="height" id="Ufh-Tb-mFv"/>
-                                    <constraint firstItem="1Sd-Dr-3F9" firstAttribute="width" secondItem="a3Y-Sv-PdF" secondAttribute="width" id="V52-q6-PdC"/>
-                                    <constraint firstItem="hiW-mT-ZQo" firstAttribute="leading" secondItem="PzB-J0-JbJ" secondAttribute="leading" id="f3W-IL-Zzx"/>
-                                    <constraint firstItem="1Sd-Dr-3F9" firstAttribute="centerY" secondItem="a3Y-Sv-PdF" secondAttribute="centerY" id="fIU-K3-9P5"/>
-                                    <constraint firstItem="1Sd-Dr-3F9" firstAttribute="centerX" secondItem="a3Y-Sv-PdF" secondAttribute="centerX" id="foI-fN-2xx"/>
-                                    <constraint firstItem="PzB-J0-JbJ" firstAttribute="top" secondItem="a3Y-Sv-PdF" secondAttribute="top" constant="31" id="i9d-n5-yEX"/>
-                                    <constraint firstItem="PzB-J0-JbJ" firstAttribute="leading" secondItem="a3Y-Sv-PdF" secondAttribute="leading" constant="30" id="n3s-XL-DAP"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,31 +32,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XE0-iC-HoE">
-                        <barButtonItem key="rightBarButtonItem" title="設定" id="u1w-C5-KXu">
-                            <connections>
-                                <segue destination="OeY-qo-bsR" kind="show" identifier="showSettings" id="xPh-bh-5lV"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="設定" id="u1w-C5-KXu"/>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="amountButton" destination="hiW-mT-ZQo" id="gnv-m4-z1X"/>
-                        <outlet property="bankNameLabel" destination="PzB-J0-JbJ" id="FrH-gb-WAU"/>
-                        <outlet property="userImageView" destination="4bj-Wl-Qd3" id="a9u-xh-FWT"/>
                         <segue destination="TfC-Wx-hWx" kind="presentation" identifier="initialRegister" id="jI9-1H-afU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5E-Iv-eTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="603" y="-48"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="wDZ-gc-5TN">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Settings" storyboardName="Settings" id="OeY-qo-bsR" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GHI-bZ-eEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1190.5" y="558"/>
         </scene>
         <!--Register-->
         <scene sceneID="sBc-a6-ISS">

@@ -22,6 +22,7 @@ class BaseViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     let VcOAuthViewController = "OAuthViewController"
     let VcRegisterUserImageViewController = "RegisterUserImageViewController"
     let VcOAuthNavigationViewController = "OAuthNavigationViewController"
+    let VcCloudOceanNumericKeypadViewController = "CloudOceanNumericKeypadViewController"
     
     // StotyBoard名
     let MainStoryBoard = "Main"
