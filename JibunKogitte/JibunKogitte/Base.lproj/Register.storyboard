@@ -36,6 +36,7 @@
                                 <state key="normal" title="これで登録する"/>
                                 <connections>
                                     <action selector="pressRegister:" destination="VFr-BI-wQm" eventType="touchUpInside" id="Nnw-OZ-XDi"/>
+                                    <segue destination="MRx-Yj-aol" kind="show" id="nGo-qP-n5P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,6 +60,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3J-V3-rtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1224" y="-800"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YkN-nQ-HHV">
+            <objects>
+                <viewController id="MRx-Yj-aol" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QNf-uR-ClG"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTw-hq-ool"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Ue-tr-1UO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwH-m7-vNj">
+                                <rect key="frame" x="20" y="72" width="560" height="520"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="横向きにしてサインを書いてね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSV-65-DHI">
+                                        <rect key="frame" x="173" y="30" width="254" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAO-uM-jgC">
+                                <rect key="frame" x="20" y="72" width="560" height="520"/>
+                                <color key="backgroundColor" red="0.82768827680000001" green="0.97260749339999997" blue="0.99967086319999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wAO-uM-jgC" firstAttribute="leading" secondItem="zwH-m7-vNj" secondAttribute="leading" id="5mv-NI-2qy"/>
+                            <constraint firstItem="zwH-m7-vNj" firstAttribute="leading" secondItem="1Ue-tr-1UO" secondAttribute="leadingMargin" id="DZt-Q2-DwA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zwH-m7-vNj" secondAttribute="trailing" id="L8Q-VI-OWc"/>
+                            <constraint firstItem="jTw-hq-ool" firstAttribute="top" secondItem="zwH-m7-vNj" secondAttribute="bottom" constant="8" symbolic="YES" id="YdV-g6-Zk8"/>
+                            <constraint firstItem="wAO-uM-jgC" firstAttribute="trailing" secondItem="zwH-m7-vNj" secondAttribute="trailing" id="Z91-4A-iRb"/>
+                            <constraint firstItem="zwH-m7-vNj" firstAttribute="top" secondItem="QNf-uR-ClG" secondAttribute="bottom" constant="8" symbolic="YES" id="jbQ-83-O0o"/>
+                            <constraint firstItem="wAO-uM-jgC" firstAttribute="top" secondItem="zwH-m7-vNj" secondAttribute="top" id="r8D-qQ-cfM"/>
+                            <constraint firstItem="wAO-uM-jgC" firstAttribute="baseline" secondItem="zwH-m7-vNj" secondAttribute="baseline" id="vSC-Wv-lB9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbz-rD-GBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="-817"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="yg3-mi-r0n">
