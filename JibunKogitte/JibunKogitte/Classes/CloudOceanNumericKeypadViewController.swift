@@ -155,8 +155,13 @@ class CloudOceanNumericKeypadViewController: BaseViewController {
             self.value = parameter!
         }
         
+        let userModel = UserModel.init()
+        let request = Dictionary<String,String>()
+        userModel.startConnection(request) { (response, error) -> Void in
+            //print(response)
+        }
+        
         displayToLabel(self.value)
     }
-
 
 }

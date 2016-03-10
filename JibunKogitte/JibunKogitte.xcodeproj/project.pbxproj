@@ -20,7 +20,7 @@
 		8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */; };
 		8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132171C8C005600FDD0EF /* OAuthViewController.swift */; };
 		8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132191C8C146300FDD0EF /* CommontProcess.swift */; };
-		8E44C0E81C8C7C3900E9561A /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44C0E71C8C7C3900E9561A /* UserInfoModel.swift */; };
+		8E44C0E81C8C7C3900E9561A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44C0E71C8C7C3900E9561A /* UserModel.swift */; };
 		8E91F8E71C917BB700C50086 /* RegisterSigniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */; };
 		8EFA0CB81C8C2F6500BEF641 /* MyCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CB61C8C2F6500BEF641 /* MyCheck.xcdatamodeld */; };
 		8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */; };
@@ -45,7 +45,7 @@
 		8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Classes/BaseViewController.swift; sourceTree = "<group>"; };
 		8E4132171C8C005600FDD0EF /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthViewController.swift; path = Classes/OAuthViewController.swift; sourceTree = "<group>"; };
 		8E4132191C8C146300FDD0EF /* CommontProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommontProcess.swift; path = Classes/CommontProcess.swift; sourceTree = "<group>"; };
-		8E44C0E71C8C7C3900E9561A /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoModel.swift; path = Classes/UserInfoModel.swift; sourceTree = "<group>"; };
+		8E44C0E71C8C7C3900E9561A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Classes/UserModel.swift; sourceTree = "<group>"; };
 		8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterSigniture.swift; path = Classes/RegisterSigniture.swift; sourceTree = "<group>"; };
 		8EFA0CB71C8C2F6500BEF641 /* MyCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCheck.xcdatamodel; sourceTree = "<group>"; };
 		8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Classes/CoreDataManager.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				8EFA0CE21C8C383800BEF641 /* CoreDataModel */,
 				8E4132111C8B19AC00FDD0EF /* BaseModel.swift */,
 				8EFA0CBF1C8C307300BEF641 /* MyCheckInfoModel.swift */,
-				8E44C0E71C8C7C3900E9561A /* UserInfoModel.swift */,
+				8E44C0E71C8C7C3900E9561A /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 				8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */,
 				8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */,
 				8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */,
-				8E44C0E81C8C7C3900E9561A /* UserInfoModel.swift in Sources */,
+				8E44C0E81C8C7C3900E9561A /* UserModel.swift in Sources */,
 				8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */,
 				8E4131FB1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift in Sources */,
 				8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */,

@@ -42,6 +42,7 @@ class OAuthViewController: BaseViewController,UIWebViewDelegate {
                 if (item != nil) {
                     if ((item?.containsString("access_token=")) == true) {
                         let access_token = item?.stringByReplacingOccurrencesOfString("access_token=", withString: "")
+                        CommonProcess.clear();
                         CommonProcess.keychainSave("access_token", data: (access_token?.dataUsingEncoding(NSUTF8StringEncoding))!)
                         // Viewを閉じる
                         if isInitialRegister == true {

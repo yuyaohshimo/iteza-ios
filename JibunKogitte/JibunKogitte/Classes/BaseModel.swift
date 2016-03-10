@@ -16,7 +16,7 @@ class BaseModel:NSObject,NSURLSessionDelegate {
         case GET
     }
     
-    let urlBaseString = "http://"
+    let urlBaseString = "http://www.fiftyriver.net:3000/api/checky"
     var urlString:String?           // URL
     var requestMethod:Method?       // POST or GET
     
@@ -44,9 +44,8 @@ class BaseModel:NSObject,NSURLSessionDelegate {
         } else {
             request = NSMutableURLRequest(URL: NSURL(string: urlString! + postString)!)
         }
-        let access_token = NSString(data: CommonProcess.keychainLoad("access-token")!, encoding:NSUTF8StringEncoding)
-        CommonProcess.keychainLoad("access-token")
-        request?.allHTTPHeaderFields = ["Authorization":access_token! as String]
+        let access_token = NSString(data: CommonProcess.keychainLoad("access_token")!, encoding:NSUTF8StringEncoding)
+        request?.allHTTPHeaderFields = ["auth_token":access_token! as String]
         let dataTask = session.dataTaskWithRequest(request!) { (data, response, error) -> Void in
             // レスポンスが返却されてきた時の処理
             var responseDict = Dictionary<String,AnyObject>()

@@ -30,6 +30,7 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
                 presentViewController(vc, animated: true, completion:nil)
 
             } else {
+                
                 let fetchRequest = NSFetchRequest()
                 let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
                 fetchRequest.entity = entity
@@ -47,23 +48,6 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
             vc.isInitialRegister = true
             presentViewController(vc, animated: true, completion:nil)
         }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // ユーザ登録されていれば電卓を表示する
-        /*let fetchRequest = NSFetchRequest()
-        let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
-        fetchRequest.entity = entity
-        do {
-            let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
-            if pictures.count > 0 {
-                let vc = storyboard.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
-                presentViewController(vc, animated: false, completion: nil)
-            }
-        } catch {
-        }*/
     }
     
 
@@ -95,6 +79,13 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
             }
         }
         
+    }
+    override func viewWillAppear(animated: Bool) {
+        let userModel = UserModel.init()
+        let request = Dictionary<String,String>()
+        userModel.startConnection(request) { (response, error) -> Void in
+            //print(response)
+        }
     }
     // MARK:回転検知
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

@@ -18,22 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顔写真を登録してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTl-gD-AZs">
-                                <rect key="frame" x="198" y="115" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Y7-0f-ivC">
-                                <rect key="frame" x="200" y="166" width="200" height="200"/>
+                                <rect key="frame" x="233" y="198" width="134" height="134"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="UYU-h1-xTv"/>
-                                    <constraint firstAttribute="height" constant="200" id="tWq-mA-nI8"/>
+                                    <constraint firstAttribute="width" constant="134" id="UYU-h1-xTv"/>
+                                    <constraint firstAttribute="height" constant="134" id="tWq-mA-nI8"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc4-6G-UHV">
-                                <rect key="frame" x="248" y="447" width="105" height="30"/>
-                                <state key="normal" title="これで登録する"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTl-gD-AZs">
+                                <rect key="frame" x="210" y="352" width="181" height="40"/>
+                                <string key="text">あなたのCheckyを
+作りましょう。</string>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.054901960784313725" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc4-6G-UHV">
+                                <rect key="frame" x="222" y="408" width="156" height="64"/>
+                                <state key="normal" backgroundImage="chekyLogo"/>
                                 <connections>
                                     <action selector="pressRegister:" destination="VFr-BI-wQm" eventType="touchUpInside" id="Nnw-OZ-XDi"/>
                                     <segue destination="MRx-Yj-aol" kind="show" id="nGo-qP-n5P"/>
@@ -45,10 +47,18 @@
                             <constraint firstItem="8Y7-0f-ivC" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="1mu-jN-dQV"/>
                             <constraint firstItem="OHk-gd-a9W" firstAttribute="top" secondItem="Wc4-6G-UHV" secondAttribute="bottom" constant="123" id="FyM-Lp-3Vu"/>
                             <constraint firstItem="Wc4-6G-UHV" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="VTW-ol-UAP"/>
-                            <constraint firstItem="DTl-gD-AZs" firstAttribute="top" secondItem="cqO-I5-dWg" secondAttribute="bottom" constant="51" id="gYM-XH-Aik"/>
+                            <constraint firstItem="8Y7-0f-ivC" firstAttribute="top" secondItem="cqO-I5-dWg" secondAttribute="bottom" constant="134" id="edo-9M-nSM"/>
                             <constraint firstItem="8Y7-0f-ivC" firstAttribute="top" secondItem="DTl-gD-AZs" secondAttribute="bottom" constant="30" id="hYm-zh-fgL"/>
+                            <constraint firstItem="DTl-gD-AZs" firstAttribute="top" secondItem="8Y7-0f-ivC" secondAttribute="bottom" constant="8" id="pcL-n0-32j"/>
                             <constraint firstItem="DTl-gD-AZs" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="sJl-ub-von"/>
+                            <constraint firstItem="DTl-gD-AZs" firstAttribute="top" secondItem="8Y7-0f-ivC" secondAttribute="bottom" constant="20" id="xY7-tE-Vho"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hYm-zh-fgL"/>
+                                <exclude reference="pcL-n0-32j"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Ezj-KS-734">
                         <barButtonItem key="rightBarButtonItem" id="4wV-nS-usw"/>
@@ -59,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3J-V3-rtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224" y="-800"/>
+            <point key="canvasLocation" x="1176" y="-908"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YkN-nQ-HHV">
@@ -79,7 +89,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="横向きにしてサインを書いてね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSV-65-DHI">
                                         <rect key="frame" x="173" y="30" width="254" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -151,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBJ-Kj-2rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="-860"/>
+            <point key="canvasLocation" x="506" y="-860"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tVC-4s-HZJ">
@@ -172,4 +182,7 @@
             <point key="canvasLocation" x="-196" y="-860"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chekyLogo" width="156" height="64"/>
+    </resources>
 </document>
