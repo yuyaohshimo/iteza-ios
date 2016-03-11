@@ -13,8 +13,10 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
 
     
     // MARK: - View読み込み時の処理
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.hidden = true
         
         // ユーザー登録してあれば、電卓画面を表示
         let fetchRequest = NSFetchRequest()
@@ -30,10 +32,15 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
                 presentViewController(vc, animated: true, completion:nil)
 
             } else {
-                // ユーザの写真を取得し、あったら小切手の金額入力を行う
-                let vc = storyboard!.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
-                vc.delegate = self
-                presentViewController(vc, animated: false, completion: nil)
+                if SessionSingletonData.sharedInstance.amount > -1 {
+                    self.performSegueWithIdentifier(self.SegueShowMyCheck, sender: nil)
+                } else {
+                    // ユーザの写真を取得し、あったら小切手の金額入力を行う
+                    let vc = storyboard!.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
+                    vc.delegate = self
+                    presentViewController(vc, animated: false, completion: nil)
+                }
+
             }
         } catch {
             let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthViewController) as! OAuthViewController
@@ -52,22 +59,20 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
- 
+    
     // MARK: - CloudOceanNumericKeypadDelegate
     func enterValue(intValue: Int) {
         // 金額を入力したので、小切手を発行する
         // 小切手発行画面へ
-        let vc = storyboard!.instantiateViewControllerWithIdentifier(VcMyCheckNavigationController) as! UINavigationController
-        let checkVc = vc.viewControllers.first as! MyCheckViewController
+        //let vc = storyboard!.instantiateViewControllerWithIdentifier(VcMyCheckNavigationController) as! UINavigationController
+        //let checkVc = vc.viewControllers.first as! MyCheckViewController
         let issueCheckModel = IssueCheckModel()
         let reqParam = Dictionary<String,String>()
         
         issueCheckModel.startConnection(reqParam) { (response, error) -> Void in
             print("発行しました")
-            checkVc.amount = intValue
-            self.presentViewController(vc, animated: true, completion: nil)
         }
-
+        SessionSingletonData.sharedInstance.amount = intValue
     }
     
 }

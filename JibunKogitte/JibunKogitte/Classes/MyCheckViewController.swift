@@ -10,10 +10,42 @@ import UIKit
 
 class MyCheckViewController: BaseViewController {
     
-    var amount:Int?
 
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var sendToLabel: UILabel!
+    @IBOutlet weak var issueDateLabel: UILabel!
+    @IBOutlet weak var signImageView: UIImageView!
+    @IBOutlet weak var checkImageView: UIImageView!
+    
+    
+    @IBAction func pressCloseButton(sender: UIBarButtonItem) {
+        SessionSingletonData.sharedInstance.amount = -1
+        // 前の画面に戻る
+        self.navigationController?.popViewControllerAnimated(false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.hidden = false
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 金額
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        let amountString = currencyFormatter.stringFromNumber(SessionSingletonData.sharedInstance.amount)
+        if amountString != nil {
+            amountLabel.text = "¥" + amountString!
+        }
+        
+        // 送信先
+        
+        // 発行日
+        
+        // 振出人
+
 
         // Do any additional setup after loading the view.
     }
