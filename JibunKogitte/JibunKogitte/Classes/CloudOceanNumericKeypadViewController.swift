@@ -133,8 +133,8 @@ class CloudOceanNumericKeypadViewController: BaseViewController {
     
     @IBAction func enterButtonAction(sender: AnyObject) {
         parameter = self.value
-        delegate?.enterValue!(parameter!)
-        dismissViewControllerAnimated(true, completion: nil)
+        self.delegate?.enterValue!(self.parameter!)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     
@@ -149,6 +149,12 @@ class CloudOceanNumericKeypadViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayToLabel(self.value)
+    }
+    
+    // MARK: - 画面表示前処理
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         if parameter != nil {
             print("parameter=\(parameter)")
@@ -158,10 +164,14 @@ class CloudOceanNumericKeypadViewController: BaseViewController {
         let userModel = UserModel.init()
         let request = Dictionary<String,String>()
         userModel.startConnection(request) { (response, error) -> Void in
-            //print(response)
+            SessionSingletonData.sharedInstance.userId = response[userModel.ResUserUserId] as? String
+            SessionSingletonData.sharedInstance.userName = response[userModel.ResUserUserName] as? String
+            SessionSingletonData.sharedInstance.phoneNumber = response[userModel.ResUserPhoneNumber] as? String
+            SessionSingletonData.sharedInstance.accountId = response[userModel.ResUserAccountId] as? String
+            SessionSingletonData.sharedInstance.balance = response[userModel.ResUserBalance] as? Int
+            
         }
-        
-        displayToLabel(self.value)
+
     }
 
 }

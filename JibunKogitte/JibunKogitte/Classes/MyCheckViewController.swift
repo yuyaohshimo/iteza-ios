@@ -9,6 +9,8 @@
 import UIKit
 
 class MyCheckViewController: BaseViewController {
+    
+    var amount:Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()

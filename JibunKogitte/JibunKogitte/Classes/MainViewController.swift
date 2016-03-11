@@ -30,18 +30,10 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
                 presentViewController(vc, animated: true, completion:nil)
 
             } else {
-                
-                let fetchRequest = NSFetchRequest()
-                let entity = NSEntityDescription.entityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext)
-                fetchRequest.entity = entity
-                do {
-                    let pictures = try CoreDataManager.sharedInstance.managedObjectContext.executeFetchRequest(fetchRequest) as! [MyCheckData]
-                    if pictures.count > 0 {
-                        let vc = storyboard!.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
-                        presentViewController(vc, animated: false, completion: nil)
-                    }
-                } catch {
-                }
+                // ユーザの写真を取得し、あったら小切手の金額入力を行う
+                let vc = storyboard!.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
+                vc.delegate = self
+                presentViewController(vc, animated: false, completion: nil)
             }
         } catch {
             let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthViewController) as! OAuthViewController
@@ -56,50 +48,26 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // segue.identifierの値により、処理を分ける
-        if segue.identifier != nil {
-            let identifier = segue.identifier!
-            switch identifier {
-            case "inputAmount":
-                // delegateを設定する
-                let vc = segue.destinationViewController as! CloudOceanNumericKeypadViewController
-                vc.delegate = self
-                
-                break
-            case "showSettings":
-                break
-                
-            default:
-                break
-                
-            }
-        }
         
     }
-    override func viewWillAppear(animated: Bool) {
-        let userModel = UserModel.init()
-        let request = Dictionary<String,String>()
-        userModel.startConnection(request) { (response, error) -> Void in
-            //print(response)
-        }
-    }
-    // MARK:回転検知
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        
-        if size.width > size.height {
-            // 横向きだった場合,ViewControllerを変更する
-          
-        }
-    }
-        
+ 
     // MARK: - CloudOceanNumericKeypadDelegate
     func enterValue(intValue: Int) {
-        // ボタンのタイトルに反映
+        // 金額を入力したので、小切手を発行する
+        // 小切手発行画面へ
+        let vc = storyboard!.instantiateViewControllerWithIdentifier(VcMyCheckNavigationController) as! UINavigationController
+        let checkVc = vc.viewControllers.first as! MyCheckViewController
+        let issueCheckModel = IssueCheckModel()
+        let reqParam = Dictionary<String,String>()
         
+        issueCheckModel.startConnection(reqParam) { (response, error) -> Void in
+            print("発行しました")
+            checkVc.amount = intValue
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+
     }
     
 }

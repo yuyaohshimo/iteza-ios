@@ -13,20 +13,19 @@ import MobileCoreServices
 class BaseViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     // Segue名
-    let SegueShowSettings = "showSettings"
-    let SegueInputAmount = "inputAmount"
-    let SegueSettings = "Settings"
     let SegueInitialRegieterProfile = "initialRegieterProfile"
+    let SegueShowMyCheck = "showMyCheck"
     
     // ViewController名
     let VcOAuthViewController = "OAuthViewController"
     let VcRegisterUserImageViewController = "RegisterUserImageViewController"
     let VcOAuthNavigationViewController = "OAuthNavigationViewController"
     let VcCloudOceanNumericKeypadViewController = "CloudOceanNumericKeypadViewController"
+    let VcMyCheckViewController = "MyCheckViewController"
+    let VcMyCheckNavigationController = "MyCheckNavigationController"
     
     // StotyBoard名
     let MainStoryBoard = "Main"
-    let SettingsStoryBoard = "Settings"
     let RegisterBoard = "Register"
 
     

@@ -22,6 +22,9 @@ class IssueCheckModel: BaseConnectionModel {
         if SessionSingletonData.sharedInstance.userId != nil {
             self.urlString = self.urlBaseString + SessionSingletonData.sharedInstance.userId!
         }
+        
+        // 親クラスのメソッドで送信
+        super.startConnection(parameter, handler: handler)
 
     }
 }
