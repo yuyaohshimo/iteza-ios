@@ -16,15 +16,16 @@
 		8E4131FD1C8A8E4500FDD0EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4131FC1C8A8E4500FDD0EF /* MainViewController.swift */; };
 		8E41320D1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41320C1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift */; };
 		8E4132101C8B0E6C00FDD0EF /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */; };
-		8E4132121C8B19AC00FDD0EF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132111C8B19AC00FDD0EF /* BaseModel.swift */; };
+		8E4132121C8B19AC00FDD0EF /* BaseConnectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132111C8B19AC00FDD0EF /* BaseConnectionModel.swift */; };
 		8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */; };
 		8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132171C8C005600FDD0EF /* OAuthViewController.swift */; };
 		8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4132191C8C146300FDD0EF /* CommontProcess.swift */; };
 		8E44C0E81C8C7C3900E9561A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44C0E71C8C7C3900E9561A /* UserModel.swift */; };
+		8E4A88F61C92DDEA00AA3A09 /* IssueCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A88F51C92DDEA00AA3A09 /* IssueCheckModel.swift */; };
+		8E4A88FA1C92E11600AA3A09 /* SessionSingletonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A88F91C92E11600AA3A09 /* SessionSingletonData.swift */; };
 		8E91F8E71C917BB700C50086 /* RegisterSigniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */; };
 		8EFA0CB81C8C2F6500BEF641 /* MyCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CB61C8C2F6500BEF641 /* MyCheck.xcdatamodeld */; };
 		8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */; };
-		8EFA0CC01C8C307300BEF641 /* MyCheckInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CBF1C8C307300BEF641 /* MyCheckInfoModel.swift */; };
 		8EFA0CE51C8C385600BEF641 /* MyCheckData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CE31C8C385600BEF641 /* MyCheckData+CoreDataProperties.swift */; };
 		8EFA0CE61C8C385600BEF641 /* MyCheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CE41C8C385600BEF641 /* MyCheckData.swift */; };
 /* End PBXBuildFile section */
@@ -41,15 +42,16 @@
 		8E4131FC1C8A8E4500FDD0EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/MainViewController.swift; sourceTree = "<group>"; };
 		8E41320C1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterUserImageViewController.swift; path = Classes/RegisterUserImageViewController.swift; sourceTree = "<group>"; };
 		8E41320F1C8B0E6C00FDD0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
-		8E4132111C8B19AC00FDD0EF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModel.swift; path = Classes/BaseModel.swift; sourceTree = "<group>"; };
+		8E4132111C8B19AC00FDD0EF /* BaseConnectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseConnectionModel.swift; path = Classes/BaseConnectionModel.swift; sourceTree = "<group>"; };
 		8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Classes/BaseViewController.swift; sourceTree = "<group>"; };
 		8E4132171C8C005600FDD0EF /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthViewController.swift; path = Classes/OAuthViewController.swift; sourceTree = "<group>"; };
 		8E4132191C8C146300FDD0EF /* CommontProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommontProcess.swift; path = Classes/CommontProcess.swift; sourceTree = "<group>"; };
 		8E44C0E71C8C7C3900E9561A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Classes/UserModel.swift; sourceTree = "<group>"; };
+		8E4A88F51C92DDEA00AA3A09 /* IssueCheckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueCheckModel.swift; path = Classes/IssueCheckModel.swift; sourceTree = "<group>"; };
+		8E4A88F91C92E11600AA3A09 /* SessionSingletonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionSingletonData.swift; path = Classes/SessionSingletonData.swift; sourceTree = "<group>"; };
 		8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterSigniture.swift; path = Classes/RegisterSigniture.swift; sourceTree = "<group>"; };
 		8EFA0CB71C8C2F6500BEF641 /* MyCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCheck.xcdatamodel; sourceTree = "<group>"; };
 		8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Classes/CoreDataManager.swift; sourceTree = "<group>"; };
-		8EFA0CBF1C8C307300BEF641 /* MyCheckInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckInfoModel.swift; path = Classes/MyCheckInfoModel.swift; sourceTree = "<group>"; };
 		8EFA0CE31C8C385600BEF641 /* MyCheckData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MyCheckData+CoreDataProperties.swift"; path = "Classes/MyCheckData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8EFA0CE41C8C385600BEF641 /* MyCheckData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckData.swift; path = Classes/MyCheckData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,10 +127,9 @@
 		8E4131F61C8A8D6500FDD0EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E4A88F81C92E0EC00AA3A09 /* Data */,
+				8E4A88F71C92E0AA00AA3A09 /* ConnectionModel */,
 				8EFA0CE21C8C383800BEF641 /* CoreDataModel */,
-				8E4132111C8B19AC00FDD0EF /* BaseModel.swift */,
-				8EFA0CBF1C8C307300BEF641 /* MyCheckInfoModel.swift */,
-				8E44C0E71C8C7C3900E9561A /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -146,6 +147,24 @@
 				8E4132191C8C146300FDD0EF /* CommontProcess.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		8E4A88F71C92E0AA00AA3A09 /* ConnectionModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E4132111C8B19AC00FDD0EF /* BaseConnectionModel.swift */,
+				8E44C0E71C8C7C3900E9561A /* UserModel.swift */,
+				8E4A88F51C92DDEA00AA3A09 /* IssueCheckModel.swift */,
+			);
+			name = ConnectionModel;
+			sourceTree = "<group>";
+		};
+		8E4A88F81C92E0EC00AA3A09 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E4A88F91C92E11600AA3A09 /* SessionSingletonData.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		8EFA0CE21C8C383800BEF641 /* CoreDataModel */ = {
@@ -238,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E4132121C8B19AC00FDD0EF /* BaseModel.swift in Sources */,
+				8E4132121C8B19AC00FDD0EF /* BaseConnectionModel.swift in Sources */,
 				8E91F8E71C917BB700C50086 /* RegisterSigniture.swift in Sources */,
 				8EFA0CB81C8C2F6500BEF641 /* MyCheck.xcdatamodeld in Sources */,
 				8E41320D1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift in Sources */,
@@ -246,6 +265,7 @@
 				8EFA0CE61C8C385600BEF641 /* MyCheckData.swift in Sources */,
 				8EFA0CE51C8C385600BEF641 /* MyCheckData+CoreDataProperties.swift in Sources */,
 				8E1171B71C899134003806A5 /* AppDelegate.swift in Sources */,
+				8E4A88F61C92DDEA00AA3A09 /* IssueCheckModel.swift in Sources */,
 				8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */,
 				8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */,
 				8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */,
@@ -253,7 +273,7 @@
 				8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */,
 				8E4131FB1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift in Sources */,
 				8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */,
-				8EFA0CC01C8C307300BEF641 /* MyCheckInfoModel.swift in Sources */,
+				8E4A88FA1C92E11600AA3A09 /* SessionSingletonData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

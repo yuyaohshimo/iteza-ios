@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserModel: BaseModel {
+class UserModel: BaseConnectionModel {
     // レスポンスキー
     let ResUserUserId = "user_id"               // ユーザID
     let ResUserUserName = "user_name"           // ユーザ名
@@ -20,7 +20,7 @@ class UserModel: BaseModel {
     // 初期処理
     override init() {
         super.init()
-        self.urlString = self.urlBaseString + "/api/cheky/user?"
+        self.urlString = self.urlBaseString
         self.requestMethod = .GET
     }
 }

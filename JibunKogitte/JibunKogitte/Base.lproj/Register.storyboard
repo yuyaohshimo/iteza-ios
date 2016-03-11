@@ -33,8 +33,8 @@
                                 <color key="textColor" red="0.0" green="0.054901960784313725" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc4-6G-UHV">
-                                <rect key="frame" x="222" y="408" width="156" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc4-6G-UHV">
+                                <rect key="frame" x="222" y="413" width="156" height="64"/>
                                 <state key="normal" backgroundImage="chekyLogo"/>
                                 <connections>
                                     <action selector="pressRegister:" destination="VFr-BI-wQm" eventType="touchUpInside" id="Nnw-OZ-XDi"/>
@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="1176" y="-908"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Signiture-->
         <scene sceneID="YkN-nQ-HHV">
             <objects>
-                <viewController id="MRx-Yj-aol" sceneMemberID="viewController">
+                <viewController id="MRx-Yj-aol" customClass="RegisterSigniture" customModule="JibunKogitte" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QNf-uR-ClG"/>
                         <viewControllerLayoutGuide type="bottom" id="jTw-hq-ool"/>
@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbz-rD-GBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="-817"/>
+            <point key="canvasLocation" x="1896" y="-1173"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="yg3-mi-r0n">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBJ-Kj-2rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="-860"/>
+            <point key="canvasLocation" x="494" y="-984"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tVC-4s-HZJ">
