@@ -41,14 +41,24 @@
                                     <segue destination="MRx-Yj-aol" kind="show" id="nGo-qP-n5P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="bookGenerationButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhm-FR-VKL">
+                                <rect key="frame" x="162" y="529" width="277" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="TEST for Book Generation"/>
+                                <connections>
+                                    <action selector="bookGenerationButtonAction:" destination="VFr-BI-wQm" eventType="touchUpInside" id="cKL-rJ-ZfG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Y7-0f-ivC" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="1mu-jN-dQV"/>
                             <constraint firstItem="OHk-gd-a9W" firstAttribute="top" secondItem="Wc4-6G-UHV" secondAttribute="bottom" constant="123" id="FyM-Lp-3Vu"/>
                             <constraint firstItem="Wc4-6G-UHV" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="VTW-ol-UAP"/>
+                            <constraint firstItem="Nhm-FR-VKL" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="bB9-LI-bVV"/>
                             <constraint firstItem="8Y7-0f-ivC" firstAttribute="top" secondItem="cqO-I5-dWg" secondAttribute="bottom" constant="134" id="edo-9M-nSM"/>
                             <constraint firstItem="8Y7-0f-ivC" firstAttribute="top" secondItem="DTl-gD-AZs" secondAttribute="bottom" constant="30" id="hYm-zh-fgL"/>
+                            <constraint firstItem="OHk-gd-a9W" firstAttribute="top" secondItem="Nhm-FR-VKL" secondAttribute="bottom" constant="30" id="k6x-Hy-4Vn"/>
                             <constraint firstItem="DTl-gD-AZs" firstAttribute="top" secondItem="8Y7-0f-ivC" secondAttribute="bottom" constant="8" id="pcL-n0-32j"/>
                             <constraint firstItem="DTl-gD-AZs" firstAttribute="centerX" secondItem="0Bs-9y-vQu" secondAttribute="centerX" id="sJl-ub-von"/>
                             <constraint firstItem="DTl-gD-AZs" firstAttribute="top" secondItem="8Y7-0f-ivC" secondAttribute="bottom" constant="20" id="xY7-tE-Vho"/>
@@ -64,6 +74,7 @@
                         <barButtonItem key="rightBarButtonItem" id="4wV-nS-usw"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bookGenerationButton" destination="Nhm-FR-VKL" id="uu4-Pb-QHO"/>
                         <outlet property="profileImageView" destination="8Y7-0f-ivC" id="PXC-iN-PKt"/>
                     </connections>
                 </viewController>
