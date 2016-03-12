@@ -93,8 +93,6 @@ class MyCheckViewController: BaseViewController {
         
         
         // 金額
-        SessionSingletonData.sharedInstance.amount = 1000000
-
         let currencyFormatter = NSNumberFormatter()
         currencyFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         let amountString = currencyFormatter.stringFromNumber(SessionSingletonData.sharedInstance.amount)
@@ -116,7 +114,7 @@ class MyCheckViewController: BaseViewController {
         issueDateLabel.text = outString
         
         // 発行ID
-        issueIdLabel.text = "1234567890ABCDEFGH"
+        issueIdLabel.text = SessionSingletonData.sharedInstance.checkId
         
         // サインのテスト
         let signImage = UIImage(named: "SignTest")

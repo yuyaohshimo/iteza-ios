@@ -27,14 +27,14 @@ class BaseConnectionModel:NSObject,NSURLSessionDelegate {
     }
     
     // MARK: - データ送信処理
-    func startConnection (parameter:Dictionary<String,String>,handler:(response:Dictionary<String,AnyObject>,error:NSError?)->Void) -> Void {
+    func startConnection (parameter:Dictionary<String,AnyObject>,handler:(response:Dictionary<String,AnyObject>,httpResponse:NSHTTPURLResponse?, error:NSError?)->Void) -> Void {
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         var request:NSMutableURLRequest?
         
         // パラメータを付加する
         var postString:String = ""
         for (key,value) in parameter {
-            postString = postString + ("\(key) = \(value)")
+            postString = postString + ("\(key)=\(value)")
         }
         // POSTの場合とそれ以外の場合で処理わけ
         if (requestMethod == .POST) {
@@ -49,19 +49,16 @@ class BaseConnectionModel:NSObject,NSURLSessionDelegate {
         let dataTask = session.dataTaskWithRequest(request!) { (data, response, error) -> Void in
             // レスポンスが返却されてきた時の処理
             var responseDict = Dictionary<String,AnyObject>()
-            let httpReponse = response as? NSHTTPURLResponse
-            if (httpReponse?.statusCode == 400) {
-                return;
-            }
+            let httpResponse = response as? NSHTTPURLResponse
             if (data != nil) {
                 do {
                     responseDict = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.init(rawValue: 0)) as! Dictionary<String, AnyObject>
                     
                 } catch {
                 }
-                // レスポンスを通知
-                handler(response: responseDict, error: error)
             }
+            // レスポンスを通知
+            handler(response: responseDict,httpResponse:httpResponse, error: error)
         }
         // 通信開始
         dataTask.resume()

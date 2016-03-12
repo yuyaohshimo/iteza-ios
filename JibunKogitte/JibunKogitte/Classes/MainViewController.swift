@@ -69,10 +69,15 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
         //let vc = storyboard!.instantiateViewControllerWithIdentifier(VcMyCheckNavigationController) as! UINavigationController
         //let checkVc = vc.viewControllers.first as! MyCheckViewController
         let issueCheckModel = IssueCheckModel()
-        let reqParam = Dictionary<String,String>()
+        var reqParam = Dictionary<String,AnyObject>()
+        reqParam[issueCheckModel.ReqAmount] = intValue
+        SessionSingletonData.sharedInstance.checkId = ""
         
-        issueCheckModel.startConnection(reqParam) { (response, error) -> Void in
+        issueCheckModel.startConnection(reqParam) { (response,httpResponse, error) -> Void in
             print("発行しました")
+            SessionSingletonData.sharedInstance.checkId = response[issueCheckModel.ResCheckId] as? String
+            print(SessionSingletonData.sharedInstance.checkId)
+            
         }
         SessionSingletonData.sharedInstance.amount = intValue
     }
