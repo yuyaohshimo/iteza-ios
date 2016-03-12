@@ -25,5 +25,6 @@ class SessionSingletonData: NSObject {
     var accountId:String?      // アカウント
     var balance:Int?            // 残高
     var amount = -1;           // 小切手の入力値
+    var checkId:String?         // 小切手のID
 
 }

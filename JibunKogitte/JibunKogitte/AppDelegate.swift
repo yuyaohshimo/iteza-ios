@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // プッシュ登録(Bluemix)
-        //IMFClient.sharedInstance().initializeWithBackendRoute("add_your_applicationRoute_here", backendGUID: "add_your_applicationId_here");
+        IMFClient.sharedInstance().initializeWithBackendRoute("http://checky.au-syd.mybluemix.net", backendGUID: "7c79ee11-f9fe-4079-a05f-d275bee388c9");
         //Initialize client Push SDK for Swift
 
 
@@ -55,10 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK:APNSへデバイスが登録できた
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         
-        //let push = IMFPushClient.sharedInstance()
-        //push.registerDeviceToken(deviceToken) { (response, error) -> Void in
-        //    print("registerDeviceToken")
-        //}
+        let push = IMFPushClient.sharedInstance()
+        push.registerDeviceToken(deviceToken) { (response, error) -> Void in
+            print("registerDeviceToken")
+        }
         
     }
     
