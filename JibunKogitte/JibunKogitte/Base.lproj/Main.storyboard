@@ -190,6 +190,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <segue destination="Ufm-CL-gdl" kind="show" identifier="showMyCheck" animates="NO" id="jNs-2Q-37h"/>
+                        <segue destination="OQg-Oa-JAU" kind="show" identifier="showInput" animates="NO" id="YcT-GO-TM0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5E-Iv-eTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -399,12 +400,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWc-Sd-xU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985" y="-12"/>
+            <point key="canvasLocation" x="1107" y="-8"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f2b-JD-PCc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ot-cp-1xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MGr-cr-tIT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -417,6 +417,7 @@
                         <segue destination="2w4-jY-mZj" kind="relationship" relationship="rootViewController" id="Hnx-Sa-iKP"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ot-cp-1xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-277" y="2"/>
         </scene>

@@ -134,7 +134,8 @@ class CloudOceanNumericKeypadViewController: BaseViewController {
     @IBAction func enterButtonAction(sender: AnyObject) {
         parameter = self.value
         self.delegate?.enterValue!(self.parameter!)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(false)
+        //self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     

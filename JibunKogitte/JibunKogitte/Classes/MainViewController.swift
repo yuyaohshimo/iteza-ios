@@ -36,9 +36,7 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
                     self.performSegueWithIdentifier(self.SegueShowMyCheck, sender: nil)
                 } else {
                     // ユーザの写真を取得し、あったら小切手の金額入力を行う
-                    let vc = storyboard!.instantiateViewControllerWithIdentifier(VcCloudOceanNumericKeypadViewController) as! CloudOceanNumericKeypadViewController
-                    vc.delegate = self
-                    presentViewController(vc, animated: false, completion: nil)
+                    performSegueWithIdentifier(SegueShowInput, sender: nil)
                 }
 
             }
@@ -57,7 +55,11 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        if segue.identifier == SegueShowInput {
+            if let vc = segue.destinationViewController as? CloudOceanNumericKeypadViewController {
+                vc.delegate  = self
+            }
+        }
     }
     
     // MARK: - CloudOceanNumericKeypadDelegate

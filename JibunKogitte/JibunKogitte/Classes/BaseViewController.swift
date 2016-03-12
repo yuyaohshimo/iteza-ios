@@ -15,6 +15,7 @@ class BaseViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     // Segue名
     let SegueInitialRegieterProfile = "initialRegieterProfile"
     let SegueShowMyCheck = "showMyCheck"
+    let SegueShowInput = "showInput"
     
     // ViewController名
     let VcOAuthViewController = "OAuthViewController"
