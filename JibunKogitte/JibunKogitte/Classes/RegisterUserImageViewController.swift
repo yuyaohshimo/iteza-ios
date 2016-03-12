@@ -13,6 +13,17 @@ class RegisterUserImageViewController: BaseViewController {
     
     lazy var profileImage:UIImage = UIImage()
 
+    
+    @IBOutlet weak var bookGenerationButton: UIButton!
+    
+    @IBAction func bookGenerationButtonAction(sender: AnyObject) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: MainStoryBoard,bundle: nil)
+        let vc = UIStoryboard(name: MainStoryBoard, bundle: nil).instantiateViewControllerWithIdentifier("MyCheckViewController") as! MyCheckViewController
+        presentViewController(vc, animated: true, completion:nil)
+    }
+
+    
+    
     @IBOutlet weak var profileImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()

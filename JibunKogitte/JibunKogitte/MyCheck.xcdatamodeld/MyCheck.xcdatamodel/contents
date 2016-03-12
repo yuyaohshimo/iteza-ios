@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
     <entity name="MyCheckData" representedClassName=".MyCheckData" syncable="YES">
+        <attribute name="maskImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="profileImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="signImage" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MyCheckData" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="MyCheckData" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

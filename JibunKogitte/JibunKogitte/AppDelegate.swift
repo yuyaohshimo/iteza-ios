@@ -15,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // プッシュ登録(Bluemix)
+        //IMFClient.sharedInstance().initializeWithBackendRoute("add_your_applicationRoute_here", backendGUID: "add_your_applicationId_here");
+        //Initialize client Push SDK for Swift
+
+
+        // PUSH登録(iOS)
+        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound,], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+        
         // Override point for customization after application launch.
         return true
     }
@@ -39,6 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK:APNSへデバイスが登録できた
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        //let push = IMFPushClient.sharedInstance()
+        //push.registerDeviceToken(deviceToken) { (response, error) -> Void in
+        //    print("registerDeviceToken")
+        //}
+        
     }
     
 

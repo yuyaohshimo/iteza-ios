@@ -15,5 +15,7 @@ import CoreData
 extension MyCheckData {
 
     @NSManaged var profileImage: NSData?
+    @NSManaged var maskImage:NSData?
+    @NSManaged var signImage:NSData?
 
 }

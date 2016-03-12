@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1FC5D91C943593000AA71A /* checkyLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D21C943593000AA71A /* checkyLogo.png */; };
+		7C1FC5DA1C943593000AA71A /* checkyLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D31C943593000AA71A /* checkyLogo@2x.png */; };
+		7C1FC5DB1C943593000AA71A /* checkyLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D41C943593000AA71A /* checkyLogo@3x.png */; };
+		7C1FC5DC1C943593000AA71A /* checkyLogoFrameOut.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D51C943593000AA71A /* checkyLogoFrameOut.png */; };
+		7C1FC5DD1C943593000AA71A /* ckBgGrayPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D61C943593000AA71A /* ckBgGrayPattern.png */; };
+		7C1FC5DE1C943593000AA71A /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D71C943593000AA71A /* mask.png */; };
+		7C1FC5DF1C943593000AA71A /* SignTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D81C943593000AA71A /* SignTest.png */; };
+		7C1FC5E41C943714000AA71A /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5E11C9435AB000AA71A /* Gotham-Bold.otf */; };
+		7C1FC5E51C943714000AA71A /* NexaHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5E21C9435AB000AA71A /* NexaHeavy.otf */; };
 		8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */; };
 		8E1171B71C899134003806A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1171B61C899134003806A5 /* AppDelegate.swift */; };
 		8E1171BC1C899134003806A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1171BA1C899134003806A5 /* Main.storyboard */; };
@@ -28,9 +37,21 @@
 		8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */; };
 		8EFA0CE51C8C385600BEF641 /* MyCheckData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CE31C8C385600BEF641 /* MyCheckData+CoreDataProperties.swift */; };
 		8EFA0CE61C8C385600BEF641 /* MyCheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CE41C8C385600BEF641 /* MyCheckData.swift */; };
+		91661C95214C1BA6E6689D27 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DECA9EB6970C6354C16B1BDA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08D8B5C3DDA6020B6FB9B8C1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		30A49C347E33D18C1F97B290 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7C1FC5D21C943593000AA71A /* checkyLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkyLogo.png; path = Resources/checkyLogo.png; sourceTree = "<group>"; };
+		7C1FC5D31C943593000AA71A /* checkyLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkyLogo@2x.png"; path = "Resources/checkyLogo@2x.png"; sourceTree = "<group>"; };
+		7C1FC5D41C943593000AA71A /* checkyLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkyLogo@3x.png"; path = "Resources/checkyLogo@3x.png"; sourceTree = "<group>"; };
+		7C1FC5D51C943593000AA71A /* checkyLogoFrameOut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkyLogoFrameOut.png; path = Resources/checkyLogoFrameOut.png; sourceTree = "<group>"; };
+		7C1FC5D61C943593000AA71A /* ckBgGrayPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ckBgGrayPattern.png; path = Resources/ckBgGrayPattern.png; sourceTree = "<group>"; };
+		7C1FC5D71C943593000AA71A /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mask.png; path = Resources/mask.png; sourceTree = "<group>"; };
+		7C1FC5D81C943593000AA71A /* SignTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignTest.png; path = Resources/SignTest.png; sourceTree = "<group>"; };
+		7C1FC5E11C9435AB000AA71A /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "Fonts/Gotham-Bold.otf"; sourceTree = "<group>"; };
+		7C1FC5E21C9435AB000AA71A /* NexaHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NexaHeavy.otf; path = Fonts/NexaHeavy.otf; sourceTree = "<group>"; };
 		8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckViewController.swift; path = Classes/MyCheckViewController.swift; sourceTree = "<group>"; };
 		8E1171B31C899134003806A5 /* JibunKogitte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JibunKogitte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1171B61C899134003806A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,10 +71,12 @@
 		8E4A88F51C92DDEA00AA3A09 /* IssueCheckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueCheckModel.swift; path = Classes/IssueCheckModel.swift; sourceTree = "<group>"; };
 		8E4A88F91C92E11600AA3A09 /* SessionSingletonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionSingletonData.swift; path = Classes/SessionSingletonData.swift; sourceTree = "<group>"; };
 		8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterSigniture.swift; path = Classes/RegisterSigniture.swift; sourceTree = "<group>"; };
+		8E9FE1FC1C941C7A009FC29F /* MyCheck-swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyCheck-swift.h"; sourceTree = "<group>"; };
 		8EFA0CB71C8C2F6500BEF641 /* MyCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCheck.xcdatamodel; sourceTree = "<group>"; };
 		8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Classes/CoreDataManager.swift; sourceTree = "<group>"; };
 		8EFA0CE31C8C385600BEF641 /* MyCheckData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MyCheckData+CoreDataProperties.swift"; path = "Classes/MyCheckData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8EFA0CE41C8C385600BEF641 /* MyCheckData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckData.swift; path = Classes/MyCheckData.swift; sourceTree = "<group>"; };
+		DECA9EB6970C6354C16B1BDA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +84,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91661C95214C1BA6E6689D27 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C1FC5E01C94359D000AA71A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FC5D21C943593000AA71A /* checkyLogo.png */,
+				7C1FC5D31C943593000AA71A /* checkyLogo@2x.png */,
+				7C1FC5D41C943593000AA71A /* checkyLogo@3x.png */,
+				7C1FC5D51C943593000AA71A /* checkyLogoFrameOut.png */,
+				7C1FC5D61C943593000AA71A /* ckBgGrayPattern.png */,
+				7C1FC5D71C943593000AA71A /* mask.png */,
+				7C1FC5D81C943593000AA71A /* SignTest.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7C1FC5E31C9435AE000AA71A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FC5E11C9435AB000AA71A /* Gotham-Bold.otf */,
+				7C1FC5E21C9435AB000AA71A /* NexaHeavy.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		8E1171AA1C899134003806A5 = {
 			isa = PBXGroup;
 			children = (
 				8E1171B51C899134003806A5 /* JibunKogitte */,
 				8E1171B41C899134003806A5 /* Products */,
+				FDCDD09C3806941582C4E152 /* Pods */,
+				C310D87A3EE4017E2A943444 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,11 +135,14 @@
 		8E1171B51C899134003806A5 /* JibunKogitte */ = {
 			isa = PBXGroup;
 			children = (
+				7C1FC5E31C9435AE000AA71A /* Fonts */,
+				7C1FC5E01C94359D000AA71A /* Resources */,
 				8E4131F41C8A8D4A00FDD0EF /* Controller */,
 				8E4131F61C8A8D6500FDD0EF /* Model */,
 				8E4132071C8AC67400FDD0EF /* Utility */,
 				8E4131F71C8A8D6A00FDD0EF /* View */,
 				8E1171B61C899134003806A5 /* AppDelegate.swift */,
+				8E9FE1FC1C941C7A009FC29F /* MyCheck-swift.h */,
 				8EFA0CB61C8C2F6500BEF641 /* MyCheck.xcdatamodeld */,
 				8E1171BD1C899134003806A5 /* Assets.xcassets */,
 				8E1171BA1C899134003806A5 /* Main.storyboard */,
@@ -176,6 +228,23 @@
 			name = CoreDataModel;
 			sourceTree = "<group>";
 		};
+		C310D87A3EE4017E2A943444 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DECA9EB6970C6354C16B1BDA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDCDD09C3806941582C4E152 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08D8B5C3DDA6020B6FB9B8C1 /* Pods.debug.xcconfig */,
+				30A49C347E33D18C1F97B290 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E1171C51C899134003806A5 /* Build configuration list for PBXNativeTarget "JibunKogitte" */;
 			buildPhases = (
+				51CD5BB4AF0B245A5B252732 /* Check Pods Manifest.lock */,
 				8E1171AF1C899134003806A5 /* Sources */,
 				8E1171B01C899134003806A5 /* Frameworks */,
 				8E1171B11C899134003806A5 /* Resources */,
+				F2D2D4BFF97537B90080BBCA /* Embed Pods Frameworks */,
+				67629F46E5C4736992B7BDE0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,13 +316,70 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E1171C11C899134003806A5 /* LaunchScreen.storyboard in Resources */,
+				7C1FC5DE1C943593000AA71A /* mask.png in Resources */,
 				8E1171BE1C899134003806A5 /* Assets.xcassets in Resources */,
+				7C1FC5DA1C943593000AA71A /* checkyLogo@2x.png in Resources */,
+				7C1FC5DF1C943593000AA71A /* SignTest.png in Resources */,
 				8E1171BC1C899134003806A5 /* Main.storyboard in Resources */,
+				7C1FC5E41C943714000AA71A /* Gotham-Bold.otf in Resources */,
+				7C1FC5E51C943714000AA71A /* NexaHeavy.otf in Resources */,
+				7C1FC5DC1C943593000AA71A /* checkyLogoFrameOut.png in Resources */,
+				7C1FC5DD1C943593000AA71A /* ckBgGrayPattern.png in Resources */,
+				7C1FC5D91C943593000AA71A /* checkyLogo.png in Resources */,
 				8E4132101C8B0E6C00FDD0EF /* Register.storyboard in Resources */,
+				7C1FC5DB1C943593000AA71A /* checkyLogo@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51CD5BB4AF0B245A5B252732 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67629F46E5C4736992B7BDE0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D2D4BFF97537B90080BBCA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E1171AF1C899134003806A5 /* Sources */ = {
@@ -392,29 +521,35 @@
 		};
 		8E1171C61C899134003806A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D8B5C3DDA6020B6FB9B8C1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JibunKogitte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koms.mycheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1617ae30-f97a-45e6-a68e-a16e33a9b897";
+				SWIFT_OBJC_BRIDGING_HEADER = "JibunKogitte/MyCheck-swift.h";
 			};
 			name = Debug;
 		};
 		8E1171C71C899134003806A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A49C347E33D18C1F97B290 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JibunKogitte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koms.mycheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1617ae30-f97a-45e6-a68e-a16e33a9b897";
+				SWIFT_OBJC_BRIDGING_HEADER = "JibunKogitte/MyCheck-swift.h";
 			};
 			name = Release;
 		};
