@@ -23,7 +23,18 @@ class MyCheckViewController: BaseViewController {
 //    let checkyBrandColor2: UIColor = UIColor(red: 0, green: 11, blue: 122, alpha: 1)
 //    let checkyBrandColor2: CGColor = UIColor(red: 0, green: 8, blue: 122, alpha: 1).CGColor
     
-    //// MaskView: 飾り付け関連のOutlet
+    
+    //// BackgroundView: 背景の模様。サーバーに送らない。
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var backgroundImageView: UIImageView! {
+        didSet {
+            let backgroundImage = UIImage(named: "ckBgGrayPattern")
+            backgroundImageView.backgroundColor = UIColor(patternImage: backgroundImage!)
+        }
+    }
+    
+    
+    //// FrameView: 飾り付け関連のOutlet
     //　左上だけ特殊。枠線で描画（あとはStoryboardが中心）
     @IBOutlet weak var leftTopMark: UIView! {
         didSet {
@@ -45,7 +56,17 @@ class MyCheckViewController: BaseViewController {
 //            gradationLineTop.layer.insertSublayer(gradation, atIndex: 0)
         }
     }
+
     
+    //// MaskView: 全体にかぶせる。ここはサーバーに送らない。
+    @IBOutlet weak var maskView: UIView!
+    @IBOutlet weak var maskImageView: UIImageView! {
+        didSet {
+            let maskImage = UIImage(named: "mask")
+            maskImageView.image = maskImage
+        }
+    }
+
     
     
     
@@ -68,6 +89,9 @@ class MyCheckViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        
+        
+        
         // 金額
         SessionSingletonData.sharedInstance.amount = 1000000
 
@@ -79,10 +103,17 @@ class MyCheckViewController: BaseViewController {
         }
         
         // 送信先
-        sendToLabel.text = "test@test.jp"
+        sendToLabel.text = "get@checky.me"
         
         // 発行日
-        issueDateLabel.text = "2016/12/12 12:12"
+        let now = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        formatter.timeStyle = .ShortStyle
+        formatter.dateStyle = .ShortStyle
+        let outString : String = formatter.stringFromDate(now)
+
+        issueDateLabel.text = outString
         
         // 発行ID
         issueIdLabel.text = "1234567890ABCDEFGH"
