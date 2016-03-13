@@ -64,5 +64,49 @@ class BaseConnectionModel:NSObject,NSURLSessionDelegate {
         dataTask.resume()
         
     }
+
+    
+    // MARK: - データ送信処理
+    func getIssueIDConnection (parameter:Dictionary<String,AnyObject>,handler:(response:Dictionary<String,AnyObject>,httpResponse:NSHTTPURLResponse?, error:NSError?)->Void) -> Void {
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        var request:NSMutableURLRequest?
+        
+        // パラメータを付加する
+        var postString:String = ""
+        for (key,value) in parameter {
+            postString = postString + ("\(key)=\(value)")
+        }
+        // POSTの場合とそれ以外の場合で処理わけ
+        if (requestMethod == .POST) {
+            request = NSMutableURLRequest(URL: NSURL(string: urlString!)!)
+            request!.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            request!.HTTPMethod = "POST"
+        } else {
+            request = NSMutableURLRequest(URL: NSURL(string: urlString! + postString)!)
+        }
+        let access_token = NSString(data: CommonProcess.keychainLoad("access_token")!, encoding:NSUTF8StringEncoding)
+        request?.allHTTPHeaderFields = ["auth_token":access_token! as String]
+        let dataTask = session.dataTaskWithRequest(request!) { (data, response, error) -> Void in
+            // レスポンスが返却されてきた時の処理
+            var responseDict = Dictionary<String,AnyObject>()
+            let httpResponse = response as? NSHTTPURLResponse
+            if (data != nil) {
+                do {
+                    responseDict = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.init(rawValue: 0)) as! Dictionary<String, AnyObject>
+                    
+                } catch {
+                }
+            }
+            // レスポンスを通知
+            handler(response: responseDict,httpResponse:httpResponse, error: error)
+        }
+        // 通信開始
+        dataTask.resume()
+        
+    }
+
+    
+    
+    
     
 }

@@ -16,6 +16,31 @@
 		7C1FC5DF1C943593000AA71A /* SignTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5D81C943593000AA71A /* SignTest.png */; };
 		7C1FC5E41C943714000AA71A /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5E11C9435AB000AA71A /* Gotham-Bold.otf */; };
 		7C1FC5E51C943714000AA71A /* NexaHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FC5E21C9435AB000AA71A /* NexaHeavy.otf */; };
+		7CA460281C94E35F00FF7F3A /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4601A1C94E35F00FF7F3A /* Icon-60@2x.png */; };
+		7CA460291C94E35F00FF7F3A /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4601B1C94E35F00FF7F3A /* Icon-60@3x.png */; };
+		7CA4602A1C94E35F00FF7F3A /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4601C1C94E35F00FF7F3A /* Icon-76.png */; };
+		7CA4602B1C94E35F00FF7F3A /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4601D1C94E35F00FF7F3A /* Icon-76@2x.png */; };
+		7CA4602C1C94E35F00FF7F3A /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4601E1C94E35F00FF7F3A /* Icon-83.5@2x.png */; };
+		7CA4602D1C94E35F00FF7F3A /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4601F1C94E35F00FF7F3A /* Icon-Small-40@2x.png */; };
+		7CA4602E1C94E35F00FF7F3A /* Icon-Small-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460201C94E35F00FF7F3A /* Icon-Small-60.png */; };
+		7CA4602F1C94E35F00FF7F3A /* Icon-Small-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460211C94E35F00FF7F3A /* Icon-Small-60@2x.png */; };
+		7CA460301C94E35F00FF7F3A /* Icon-Small-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460221C94E35F00FF7F3A /* Icon-Small-60@3x.png */; };
+		7CA460311C94E35F00FF7F3A /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460231C94E35F00FF7F3A /* Icon-Small.png */; };
+		7CA460321C94E35F00FF7F3A /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460241C94E35F00FF7F3A /* Icon-Small@2x.png */; };
+		7CA460331C94E35F00FF7F3A /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460251C94E35F00FF7F3A /* Icon-Small@3x.png */; };
+		7CA460411C94E48900FF7F3A /* iPhone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460371C94E48900FF7F3A /* iPhone4.png */; };
+		7CA460421C94E48900FF7F3A /* iPhone4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460381C94E48900FF7F3A /* iPhone4@2x.png */; };
+		7CA460431C94E48900FF7F3A /* iPad-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460391C94E48900FF7F3A /* iPad-Portrait.png */; };
+		7CA460441C94E48900FF7F3A /* iPad-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603A1C94E48900FF7F3A /* iPad-Portrait@2x.png */; };
+		7CA460451C94E48900FF7F3A /* iPhone5-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603B1C94E48900FF7F3A /* iPhone5-4.png */; };
+		7CA460461C94E48900FF7F3A /* iPhone6-4.7.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603C1C94E48900FF7F3A /* iPhone6-4.7.png */; };
+		7CA460471C94E48900FF7F3A /* iPhone6plus-5.5-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603D1C94E48900FF7F3A /* iPhone6plus-5.5-Landscape.png */; };
+		7CA460481C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603E1C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png */; };
+		7CA460491C94E48900FF7F3A /* iPad-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603F1C94E48900FF7F3A /* iPad-Landscape.png */; };
+		7CA4604A1C94E48900FF7F3A /* iPad-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460401C94E48900FF7F3A /* iPad-Landscape@2x.png */; };
+		7CA4604D1C94E9EB00FF7F3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4604C1C94E9EB00FF7F3A /* Images.xcassets */; };
+		7CA460501C95124000FF7F3A /* portraitOhshimo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4604E1C95124000FF7F3A /* portraitOhshimo.png */; };
+		7CA460511C95124000FF7F3A /* signature.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4604F1C95124000FF7F3A /* signature.png */; };
 		8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */; };
 		8E1171B71C899134003806A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1171B61C899134003806A5 /* AppDelegate.swift */; };
 		8E1171BC1C899134003806A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1171BA1C899134003806A5 /* Main.storyboard */; };
@@ -52,6 +77,31 @@
 		7C1FC5D81C943593000AA71A /* SignTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignTest.png; path = Resources/SignTest.png; sourceTree = "<group>"; };
 		7C1FC5E11C9435AB000AA71A /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gotham-Bold.otf"; path = "Fonts/Gotham-Bold.otf"; sourceTree = "<group>"; };
 		7C1FC5E21C9435AB000AA71A /* NexaHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NexaHeavy.otf; path = Fonts/NexaHeavy.otf; sourceTree = "<group>"; };
+		7CA4601A1C94E35F00FF7F3A /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		7CA4601B1C94E35F00FF7F3A /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		7CA4601C1C94E35F00FF7F3A /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		7CA4601D1C94E35F00FF7F3A /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		7CA4601E1C94E35F00FF7F3A /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		7CA4601F1C94E35F00FF7F3A /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		7CA460201C94E35F00FF7F3A /* Icon-Small-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-60.png"; sourceTree = "<group>"; };
+		7CA460211C94E35F00FF7F3A /* Icon-Small-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-60@2x.png"; sourceTree = "<group>"; };
+		7CA460221C94E35F00FF7F3A /* Icon-Small-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-60@3x.png"; sourceTree = "<group>"; };
+		7CA460231C94E35F00FF7F3A /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		7CA460241C94E35F00FF7F3A /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		7CA460251C94E35F00FF7F3A /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		7CA460371C94E48900FF7F3A /* iPhone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone4.png; sourceTree = "<group>"; };
+		7CA460381C94E48900FF7F3A /* iPhone4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone4@2x.png"; sourceTree = "<group>"; };
+		7CA460391C94E48900FF7F3A /* iPad-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-Portrait.png"; sourceTree = "<group>"; };
+		7CA4603A1C94E48900FF7F3A /* iPad-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-Portrait@2x.png"; sourceTree = "<group>"; };
+		7CA4603B1C94E48900FF7F3A /* iPhone5-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone5-4.png"; sourceTree = "<group>"; };
+		7CA4603C1C94E48900FF7F3A /* iPhone6-4.7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone6-4.7.png"; sourceTree = "<group>"; };
+		7CA4603D1C94E48900FF7F3A /* iPhone6plus-5.5-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone6plus-5.5-Landscape.png"; sourceTree = "<group>"; };
+		7CA4603E1C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone6plus-5.5-Portrait.png"; sourceTree = "<group>"; };
+		7CA4603F1C94E48900FF7F3A /* iPad-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-Landscape.png"; sourceTree = "<group>"; };
+		7CA460401C94E48900FF7F3A /* iPad-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-Landscape@2x.png"; sourceTree = "<group>"; };
+		7CA4604C1C94E9EB00FF7F3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7CA4604E1C95124000FF7F3A /* portraitOhshimo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = portraitOhshimo.png; path = Resources/portraitOhshimo.png; sourceTree = "<group>"; };
+		7CA4604F1C95124000FF7F3A /* signature.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signature.png; path = Resources/signature.png; sourceTree = "<group>"; };
 		8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckViewController.swift; path = Classes/MyCheckViewController.swift; sourceTree = "<group>"; };
 		8E1171B31C899134003806A5 /* JibunKogitte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JibunKogitte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1171B61C899134003806A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +144,8 @@
 		7C1FC5E01C94359D000AA71A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7CA4604E1C95124000FF7F3A /* portraitOhshimo.png */,
+				7CA4604F1C95124000FF7F3A /* signature.png */,
 				7C1FC5D21C943593000AA71A /* checkyLogo.png */,
 				7C1FC5D31C943593000AA71A /* checkyLogo@2x.png */,
 				7C1FC5D41C943593000AA71A /* checkyLogo@3x.png */,
@@ -101,6 +153,8 @@
 				7C1FC5D61C943593000AA71A /* ckBgGrayPattern.png */,
 				7C1FC5D71C943593000AA71A /* mask.png */,
 				7C1FC5D81C943593000AA71A /* SignTest.png */,
+				7CA4604B1C94E48F00FF7F3A /* LaunchScreen */,
+				7CA460361C94E37700FF7F3A /* AppIcon */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -112,6 +166,42 @@
 				7C1FC5E21C9435AB000AA71A /* NexaHeavy.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		7CA460361C94E37700FF7F3A /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				7CA4601A1C94E35F00FF7F3A /* Icon-60@2x.png */,
+				7CA4601B1C94E35F00FF7F3A /* Icon-60@3x.png */,
+				7CA4601C1C94E35F00FF7F3A /* Icon-76.png */,
+				7CA4601D1C94E35F00FF7F3A /* Icon-76@2x.png */,
+				7CA4601E1C94E35F00FF7F3A /* Icon-83.5@2x.png */,
+				7CA4601F1C94E35F00FF7F3A /* Icon-Small-40@2x.png */,
+				7CA460201C94E35F00FF7F3A /* Icon-Small-60.png */,
+				7CA460211C94E35F00FF7F3A /* Icon-Small-60@2x.png */,
+				7CA460221C94E35F00FF7F3A /* Icon-Small-60@3x.png */,
+				7CA460231C94E35F00FF7F3A /* Icon-Small.png */,
+				7CA460241C94E35F00FF7F3A /* Icon-Small@2x.png */,
+				7CA460251C94E35F00FF7F3A /* Icon-Small@3x.png */,
+			);
+			name = AppIcon;
+			sourceTree = "<group>";
+		};
+		7CA4604B1C94E48F00FF7F3A /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7CA460371C94E48900FF7F3A /* iPhone4.png */,
+				7CA460381C94E48900FF7F3A /* iPhone4@2x.png */,
+				7CA460391C94E48900FF7F3A /* iPad-Portrait.png */,
+				7CA4603A1C94E48900FF7F3A /* iPad-Portrait@2x.png */,
+				7CA4603B1C94E48900FF7F3A /* iPhone5-4.png */,
+				7CA4603C1C94E48900FF7F3A /* iPhone6-4.7.png */,
+				7CA4603D1C94E48900FF7F3A /* iPhone6plus-5.5-Landscape.png */,
+				7CA4603E1C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png */,
+				7CA4603F1C94E48900FF7F3A /* iPad-Landscape.png */,
+				7CA460401C94E48900FF7F3A /* iPad-Landscape@2x.png */,
+			);
+			name = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		8E1171AA1C899134003806A5 = {
@@ -149,6 +239,7 @@
 				8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */,
 				8E1171BF1C899134003806A5 /* LaunchScreen.storyboard */,
 				8E1171C21C899134003806A5 /* Info.plist */,
+				7CA4604C1C94E9EB00FF7F3A /* Images.xcassets */,
 			);
 			path = JibunKogitte;
 			sourceTree = "<group>";
@@ -316,18 +407,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E1171C11C899134003806A5 /* LaunchScreen.storyboard in Resources */,
+				7CA460441C94E48900FF7F3A /* iPad-Portrait@2x.png in Resources */,
+				7CA4602A1C94E35F00FF7F3A /* Icon-76.png in Resources */,
+				7CA4602E1C94E35F00FF7F3A /* Icon-Small-60.png in Resources */,
+				7CA460331C94E35F00FF7F3A /* Icon-Small@3x.png in Resources */,
+				7CA460491C94E48900FF7F3A /* iPad-Landscape.png in Resources */,
 				7C1FC5DE1C943593000AA71A /* mask.png in Resources */,
+				7CA4602D1C94E35F00FF7F3A /* Icon-Small-40@2x.png in Resources */,
+				7CA460511C95124000FF7F3A /* signature.png in Resources */,
 				8E1171BE1C899134003806A5 /* Assets.xcassets in Resources */,
+				7CA4604D1C94E9EB00FF7F3A /* Images.xcassets in Resources */,
+				7CA460281C94E35F00FF7F3A /* Icon-60@2x.png in Resources */,
 				7C1FC5DA1C943593000AA71A /* checkyLogo@2x.png in Resources */,
+				7CA460471C94E48900FF7F3A /* iPhone6plus-5.5-Landscape.png in Resources */,
+				7CA4602F1C94E35F00FF7F3A /* Icon-Small-60@2x.png in Resources */,
+				7CA460451C94E48900FF7F3A /* iPhone5-4.png in Resources */,
+				7CA4602B1C94E35F00FF7F3A /* Icon-76@2x.png in Resources */,
+				7CA460481C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png in Resources */,
+				7CA4604A1C94E48900FF7F3A /* iPad-Landscape@2x.png in Resources */,
 				7C1FC5DF1C943593000AA71A /* SignTest.png in Resources */,
+				7CA460431C94E48900FF7F3A /* iPad-Portrait.png in Resources */,
+				7CA460291C94E35F00FF7F3A /* Icon-60@3x.png in Resources */,
 				8E1171BC1C899134003806A5 /* Main.storyboard in Resources */,
 				7C1FC5E41C943714000AA71A /* Gotham-Bold.otf in Resources */,
+				7CA4602C1C94E35F00FF7F3A /* Icon-83.5@2x.png in Resources */,
+				7CA460421C94E48900FF7F3A /* iPhone4@2x.png in Resources */,
 				7C1FC5E51C943714000AA71A /* NexaHeavy.otf in Resources */,
 				7C1FC5DC1C943593000AA71A /* checkyLogoFrameOut.png in Resources */,
+				7CA460461C94E48900FF7F3A /* iPhone6-4.7.png in Resources */,
 				7C1FC5DD1C943593000AA71A /* ckBgGrayPattern.png in Resources */,
+				7CA460301C94E35F00FF7F3A /* Icon-Small-60@3x.png in Resources */,
 				7C1FC5D91C943593000AA71A /* checkyLogo.png in Resources */,
+				7CA460501C95124000FF7F3A /* portraitOhshimo.png in Resources */,
+				7CA460411C94E48900FF7F3A /* iPhone4.png in Resources */,
 				8E4132101C8B0E6C00FDD0EF /* Register.storyboard in Resources */,
+				7CA460321C94E35F00FF7F3A /* Icon-Small@2x.png in Resources */,
 				7C1FC5DB1C943593000AA71A /* checkyLogo@3x.png in Resources */,
+				7CA460311C94E35F00FF7F3A /* Icon-Small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +640,7 @@
 			baseConfigurationReference = 08D8B5C3DDA6020B6FB9B8C1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sachiko Kajishima (47AF7U98C2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JibunKogitte/Info.plist;
@@ -541,7 +657,7 @@
 			baseConfigurationReference = 30A49C347E33D18C1F97B290 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sachiko Kajishima (47AF7U98C2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JibunKogitte/Info.plist;

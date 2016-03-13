@@ -22,6 +22,11 @@ class RegisterUserImageViewController: BaseViewController {
         presentViewController(vc, animated: true, completion:nil)
     }
 
+    @IBOutlet weak var photoShootButton: UIButton!
+    
+    @IBAction func photoShootButtonAction(sender: AnyObject) {
+    }
+    
     
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -34,20 +39,24 @@ class RegisterUserImageViewController: BaseViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if (self.profileImageView.image == nil) {
-            // 写真を変更する
-            let alertController = UIAlertController(title: "写真を設定", message: nil, preferredStyle: .ActionSheet)
-            alertController.addAction(UIAlertAction(title: "新しい写真を撮る", style: .Default, handler: { (action) -> Void in
-                self.presentImagePickerViewController(UIImagePickerControllerSourceType.Camera)
-            }))
-            alertController.addAction(UIAlertAction(title: "保存済みの写真を選択", style: .Default, handler: { (action) -> Void in
-                self.presentImagePickerViewController(UIImagePickerControllerSourceType.PhotoLibrary)
-            }))
-            alertController.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
-        }
-       
+        
+//        if (self.profileImageView.image == nil) {
+//            // 写真を変更する
+//            let alertController = UIAlertController(title: "写真を設定", message: nil, preferredStyle: .ActionSheet)
+//            alertController.addAction(UIAlertAction(title: "新しい写真を撮る", style: .Default, handler: { (action) -> Void in
+//                self.presentImagePickerViewController(UIImagePickerControllerSourceType.Camera)
+//            }))
+//            alertController.addAction(UIAlertAction(title: "保存済みの写真を選択", style: .Default, handler: { (action) -> Void in
+//                self.presentImagePickerViewController(UIImagePickerControllerSourceType.PhotoLibrary)
+//            }))
+//            alertController.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
+//            
+//            self.presentViewController(alertController, animated: true, completion: nil)
+//        }
+
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
