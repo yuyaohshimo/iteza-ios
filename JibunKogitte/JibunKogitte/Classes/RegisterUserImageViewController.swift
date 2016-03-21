@@ -14,49 +14,35 @@ class RegisterUserImageViewController: BaseViewController {
     lazy var profileImage:UIImage = UIImage()
 
     
-    @IBOutlet weak var bookGenerationButton: UIButton!
-    
     @IBAction func bookGenerationButtonAction(sender: AnyObject) {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: MainStoryBoard,bundle: nil)
+        //let mainStoryboard: UIStoryboard = UIStoryboard(name: MainStoryBoard,bundle: nil)
         let vc = UIStoryboard(name: MainStoryBoard, bundle: nil).instantiateViewControllerWithIdentifier("MyCheckViewController") as! MyCheckViewController
         presentViewController(vc, animated: true, completion:nil)
     }
-
-    @IBOutlet weak var photoShootButton: UIButton!
     
+    // MARK:写真の登録
     @IBAction func photoShootButtonAction(sender: AnyObject) {
+        let alertController = UIAlertController(title: "写真を設定", message: nil, preferredStyle: .ActionSheet)
+        alertController.addAction(UIAlertAction(title: "新しい写真を撮る", style: .Default, handler: { (action) -> Void in
+            self.presentImagePickerViewController(UIImagePickerControllerSourceType.Camera)
+        }))
+        alertController.addAction(UIAlertAction(title: "保存済みの写真を選択", style: .Default, handler: { (action) -> Void in
+            self.presentImagePickerViewController(UIImagePickerControllerSourceType.PhotoLibrary)
+        }))
+        alertController.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+
     }
-    
-    
     
     @IBOutlet weak var profileImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-//        if (self.profileImageView.image == nil) {
-//            // 写真を変更する
-//            let alertController = UIAlertController(title: "写真を設定", message: nil, preferredStyle: .ActionSheet)
-//            alertController.addAction(UIAlertAction(title: "新しい写真を撮る", style: .Default, handler: { (action) -> Void in
-//                self.presentImagePickerViewController(UIImagePickerControllerSourceType.Camera)
-//            }))
-//            alertController.addAction(UIAlertAction(title: "保存済みの写真を選択", style: .Default, handler: { (action) -> Void in
-//                self.presentImagePickerViewController(UIImagePickerControllerSourceType.PhotoLibrary)
-//            }))
-//            alertController.addAction(UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil))
-//            
-//            self.presentViewController(alertController, animated: true, completion: nil)
-//        }
-
-        
-        
-        
+//
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,7 +55,20 @@ class RegisterUserImageViewController: BaseViewController {
         self.profileImage = image
         self.profileImageView.image = image
         
+        // 写真をCoreDataに追加
+        let newPicture = NSEntityDescription.insertNewObjectForEntityForName("MyCheckData", inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext) as? MyCheckData
+        if (newPicture != nil) {
+            newPicture!.profileImage = UIImagePNGRepresentation(self.profileImage)
+            do {
+                try CoreDataManager.sharedInstance.managedObjectContext.save()                
+            } catch {
+                
+            }
+        }
+        
         picker.dismissViewControllerAnimated(true) { () -> Void in
+            // 画面を消す
+            self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
 
         }
     }

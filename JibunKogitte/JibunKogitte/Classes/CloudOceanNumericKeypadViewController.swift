@@ -165,11 +165,11 @@ class CloudOceanNumericKeypadViewController: BaseViewController {
         let userModel = UserModel.init()
         let request = Dictionary<String,String>()
         userModel.startConnection(request) { (response, httpResponse,error) -> Void in
-            SessionSingletonData.sharedInstance.userId = response[userModel.ResUserUserId] as? String
-            SessionSingletonData.sharedInstance.userName = response[userModel.ResUserUserName] as? String
-            SessionSingletonData.sharedInstance.phoneNumber = response[userModel.ResUserPhoneNumber] as? String
-            SessionSingletonData.sharedInstance.accountId = response[userModel.ResUserAccountId] as? String
-            SessionSingletonData.sharedInstance.balance = response[userModel.ResUserBalance] as? Int
+            SessionSingletonData.sharedInstance.userId = response[UserModel.ResUserUserId] as? String
+            SessionSingletonData.sharedInstance.userName = response[UserModel.ResUserUserName] as? String
+            SessionSingletonData.sharedInstance.phoneNumber = response[UserModel.ResUserPhoneNumber] as? String
+            SessionSingletonData.sharedInstance.accountId = response[UserModel.ResUserAccountId] as? String
+            SessionSingletonData.sharedInstance.balance = response[UserModel.ResUserBalance] as? Int
             
         }
 

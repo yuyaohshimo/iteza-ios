@@ -27,8 +27,6 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
             if pictures.count == 0 {
                 // なければ、OAuth画面へ遷移する
                 let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthNavigationViewController) as! UINavigationController
-                let oAthVC = vc.visibleViewController as! OAuthViewController
-                oAthVC.isInitialRegister = true
                 presentViewController(vc, animated: true, completion:nil)
 
             } else {
@@ -41,8 +39,7 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
 
             }
         } catch {
-            let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthViewController) as! OAuthViewController
-            vc.isInitialRegister = true
+            let vc = UIStoryboard(name: RegisterBoard, bundle: nil).instantiateViewControllerWithIdentifier(VcOAuthNavigationViewController) as! UINavigationController
             presentViewController(vc, animated: true, completion:nil)
         }
     }
@@ -66,16 +63,14 @@ class MainViewController: BaseViewController,CloudOceanNumericKeypadDelegate {
     func enterValue(intValue: Int) {
         // 金額を入力したので、小切手を発行する
         // 小切手発行画面へ
-        //let vc = storyboard!.instantiateViewControllerWithIdentifier(VcMyCheckNavigationController) as! UINavigationController
-        //let checkVc = vc.viewControllers.first as! MyCheckViewController
         let issueCheckModel = IssueCheckModel()
         var reqParam = Dictionary<String,AnyObject>()
-        reqParam[issueCheckModel.ReqAmount] = intValue
+        reqParam[IssueCheckModel.ReqAmount] = intValue
         SessionSingletonData.sharedInstance.checkId = ""
         
         issueCheckModel.startConnection(reqParam) { (response,httpResponse, error) -> Void in
             print("発行しました")
-            SessionSingletonData.sharedInstance.checkId = response[issueCheckModel.ResCheckId] as? String
+            SessionSingletonData.sharedInstance.checkId = response[IssueCheckModel.ResCheckId] as? String
             print(SessionSingletonData.sharedInstance.checkId)
             
         }

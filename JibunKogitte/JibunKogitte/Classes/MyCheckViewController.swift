@@ -28,11 +28,6 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
     
     var keypadDetelage: CloudOceanNumericKeypadDelegate?
     
-    //    let checkyBrandColor1: UIColor = UIColor(red: 0, green: 157, blue: 177, alpha: 1)
-    //    let checkyBrandColor2: UIColor = UIColor(red: 0, green: 11, blue: 122, alpha: 1)
-    //    let checkyBrandColor2: CGColor = UIColor(red: 0, green: 8, blue: 122, alpha: 1).CGColor
-    
-    
     var amount: Int = 0
     var accountID: String = ""
     
@@ -47,10 +42,7 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         labelDisplayControl()
     }
     
-    
-    
-    
-    //// BackgroundView: 背景の模様。サーバーに送らない。
+    // BackgroundView: 背景の模様。サーバーに送らない。
 
     @IBOutlet weak var backgroundImageView: UIImageView! {
         didSet {
@@ -59,8 +51,7 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         }
     }
     
-    
-    //// FrameView: 飾り付け関連のOutlet
+    // FrameView: 飾り付け関連のOutlet
     //　左上だけ特殊。枠線で描画（あとはStoryboardが中心）
     @IBOutlet weak var leftTopMark: UIView! {
         didSet {
@@ -72,17 +63,7 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         }
     }
     
-    @IBOutlet weak var gradationLineTop: UIView! {
-        didSet {
-            //            let gradation = CAGradientLayer()
-            //            gradation.frame = gradationLineTop.bounds
-            //            gradation.colors = [checkyBrandColor1.CGColor, checkyBrandColor2.CGColor]
-            //            gradation.startPoint = CGPoint(x: 0, y: 0)
-            //            gradation.endPoint = CGPoint(x:1, y: 1)
-            //            gradationLineTop.layer.insertSublayer(gradation, atIndex: 0)
-        }
-    }
-    
+    @IBOutlet weak var gradationLineTop: UIView!    
     
     //// MaskView: 全体にかぶせる。ここはサーバーに送らない。
     @IBOutlet weak var maskView: UIView!
@@ -121,15 +102,12 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         print("amountString = \(amountString)")
         
         amountLabel.text = "¥" + amountString!
+        
     }
-    
-    
-    
-    
-    
     
     @IBOutlet weak var issueIDButton: UIButton!
     
+    // MARK:残高を確認して、小切手を発行する
     @IBAction func issueIDButtonAction(sender: AnyObject) {
 
         if amount == 0 {
@@ -152,21 +130,12 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         
     }
     
-    
-    
-    
-    
-    
-    
-    
     @IBOutlet weak var backFromSignButton: UIButton!
     
     @IBAction func backFromButtonAction(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    
-    
+
     
     @IBAction func pressCloseButton(sender: UIBarButtonItem) {
         // 前の画面に戻る
@@ -177,8 +146,6 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.hidden = false
-        
-        
         // 金額
         let currencyFormatter = NSNumberFormatter()
         currencyFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
@@ -219,7 +186,6 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
     
     
     
-    
     func labelDisplayControl () {
         if view.frame.width < view.frame.height {
             amountLabel.hidden = true
@@ -255,9 +221,7 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         self.view.setNeedsDisplay()
     
     }
-    
-    
-    
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -267,88 +231,43 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         labelDisplayControl ()
     }
     
-    
-    
-    
+    // MARK:小切手発行処理
     func issueIDGenetate(value: Int) {
         let issueCheckModel = IssueCheckModel()
         var reqParam = Dictionary<String,AnyObject>()
-        reqParam[issueCheckModel.ReqAmount] = value
+        reqParam[IssueCheckModel.ReqAmount] = value
         SessionSingletonData.sharedInstance.checkId = accountID
         
         print("reqParam = \(reqParam)")
         
-        dispatch_async_background() {
-        
         issueCheckModel.startConnection(reqParam) { (response,httpResponse, error) -> Void in
             print("発行しました")
-            
             self.dispatch_async_main() {
-                self.issueIdLabel.text = response[issueCheckModel.ResCheckId] as? String
+                self.issueIdLabel.text = response[IssueCheckModel.ResCheckId] as? String
             }
+            print("response = \(response[IssueCheckModel.ResCheckId])")
 
-            print("response = \(response[issueCheckModel.ResCheckId])")
-
-//            SessionSingletonData.sharedInstance.checkId = response[issueCheckModel.ResCheckId] as? String
-            print(SessionSingletonData.sharedInstance.checkId)
-            
-            }
         }
+        
     }
     
+    /// MARK:アカウントの確認
     func checkAccount() {
         let userModel = UserModel.init()
         let request = Dictionary<String,String>()
-        
-        
-        
+
         userModel.startConnection(request) { (response, httpResponse,error) -> Void in
-            let responseUserId = response[userModel.ResUserUserId] as? String
-            let responsePhoneNumber = response[userModel.ResUserPhoneNumber] as? String
-            let responseAccountId = response[userModel.ResUserAccountId] as? String
-            let responseBalance = response[userModel.ResUserBalance] as? Int
-            
+            let responseAccountId = response[UserModel.ResUserAccountId] as? String
             if responseAccountId != nil {
-                self.accountID = responseAccountId!}
-            
-            self.issueIdLabel.text = self.accountID + "より引き落とします。"
+                self.accountID = responseAccountId!
+            }
+            self.dispatch_async_main({ () -> () in
+                self.issueIdLabel.text = self.accountID + "より引き落とします。"
+            })
             
             print("responseAccountId = \(responseAccountId)")
         }
     }
-
-// Backup
-//    func checkAccount() {
-//        let userModel = UserModel.init()
-//        let request = Dictionary<String,String>()
-//        userModel.startConnection(request) { (response, httpResponse,error) -> Void in
-//            let responseUserId = response[userModel.ResUserUserId] as? String
-//            let responsePhoneNumber = response[userModel.ResUserPhoneNumber] as? String
-//            let responseAccountId = response[userModel.ResUserAccountId] as? String
-//            let responseBalance = response[userModel.ResUserBalance] as? Int
-//            
-//            if responseAccountId != nil {
-//                self.accountID = responseAccountId!}
-//            
-//            print("responseAccountId = \(responseAccountId)")
-//        }
-//    }
-
-    
-    
-    
-    
-    
-    // GDC functions
-    func dispatch_async_main(block: () -> ()) {
-        dispatch_async(dispatch_get_main_queue(), block)
-    }
-    
-    func dispatch_async_background(block: () -> ()) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-    }
-    
-    
     
     
 }

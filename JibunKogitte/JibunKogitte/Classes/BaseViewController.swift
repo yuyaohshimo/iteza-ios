@@ -16,6 +16,7 @@ class BaseViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     let SegueInitialRegieterProfile = "initialRegieterProfile"
     let SegueShowMyCheck = "showMyCheck"
     let SegueShowInput = "showInput"
+    let SegueShowVerify = "showVerify"
     
     // ViewController名
     let VcOAuthViewController = "OAuthViewController"
@@ -74,6 +75,15 @@ class BaseViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         // 閉じるだけ
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: GDC functions
+    func dispatch_async_main(block: () -> ()) {
+        dispatch_async(dispatch_get_main_queue(), block)
+    }
+    
+    func dispatch_async_background(block: () -> ()) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
     }
 
 
