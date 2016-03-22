@@ -38,7 +38,6 @@
 		7CA460481C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603E1C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png */; };
 		7CA460491C94E48900FF7F3A /* iPad-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4603F1C94E48900FF7F3A /* iPad-Landscape.png */; };
 		7CA4604A1C94E48900FF7F3A /* iPad-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA460401C94E48900FF7F3A /* iPad-Landscape@2x.png */; };
-		7CA4604D1C94E9EB00FF7F3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4604C1C94E9EB00FF7F3A /* Images.xcassets */; };
 		7CA460501C95124000FF7F3A /* portraitOhshimo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4604E1C95124000FF7F3A /* portraitOhshimo.png */; };
 		7CA460511C95124000FF7F3A /* signature.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4604F1C95124000FF7F3A /* signature.png */; };
 		8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */; };
@@ -57,6 +56,9 @@
 		8E44C0E81C8C7C3900E9561A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44C0E71C8C7C3900E9561A /* UserModel.swift */; };
 		8E4A88F61C92DDEA00AA3A09 /* IssueCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A88F51C92DDEA00AA3A09 /* IssueCheckModel.swift */; };
 		8E4A88FA1C92E11600AA3A09 /* SessionSingletonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A88F91C92E11600AA3A09 /* SessionSingletonData.swift */; };
+		8E7C7AAB1C9FA2CD00A48E50 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C7AAA1C9FA2CD00A48E50 /* LoginModel.swift */; };
+		8E7C7AAD1C9FB4BF00A48E50 /* VerityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C7AAC1C9FB4BF00A48E50 /* VerityModel.swift */; };
+		8E7C7AB11C9FE02300A48E50 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C7AB01C9FE02300A48E50 /* VerifyViewController.swift */; };
 		8E91F8E71C917BB700C50086 /* RegisterSigniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */; };
 		8EFA0CB81C8C2F6500BEF641 /* MyCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CB61C8C2F6500BEF641 /* MyCheck.xcdatamodeld */; };
 		8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA0CBD1C8C306000BEF641 /* CoreDataManager.swift */; };
@@ -99,7 +101,6 @@
 		7CA4603E1C94E48900FF7F3A /* iPhone6plus-5.5-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone6plus-5.5-Portrait.png"; sourceTree = "<group>"; };
 		7CA4603F1C94E48900FF7F3A /* iPad-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-Landscape.png"; sourceTree = "<group>"; };
 		7CA460401C94E48900FF7F3A /* iPad-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPad-Landscape@2x.png"; sourceTree = "<group>"; };
-		7CA4604C1C94E9EB00FF7F3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7CA4604E1C95124000FF7F3A /* portraitOhshimo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = portraitOhshimo.png; path = Resources/portraitOhshimo.png; sourceTree = "<group>"; };
 		7CA4604F1C95124000FF7F3A /* signature.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signature.png; path = Resources/signature.png; sourceTree = "<group>"; };
 		8E0F33631C8F29E700ADEF31 /* MyCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCheckViewController.swift; path = Classes/MyCheckViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +121,9 @@
 		8E44C0E71C8C7C3900E9561A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Classes/UserModel.swift; sourceTree = "<group>"; };
 		8E4A88F51C92DDEA00AA3A09 /* IssueCheckModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IssueCheckModel.swift; path = Classes/IssueCheckModel.swift; sourceTree = "<group>"; };
 		8E4A88F91C92E11600AA3A09 /* SessionSingletonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionSingletonData.swift; path = Classes/SessionSingletonData.swift; sourceTree = "<group>"; };
+		8E7C7AAA1C9FA2CD00A48E50 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = Classes/LoginModel.swift; sourceTree = "<group>"; };
+		8E7C7AAC1C9FB4BF00A48E50 /* VerityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerityModel.swift; path = Classes/VerityModel.swift; sourceTree = "<group>"; };
+		8E7C7AB01C9FE02300A48E50 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerifyViewController.swift; path = Classes/VerifyViewController.swift; sourceTree = "<group>"; };
 		8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterSigniture.swift; path = Classes/RegisterSigniture.swift; sourceTree = "<group>"; };
 		8E9FE1FC1C941C7A009FC29F /* MyCheck-swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyCheck-swift.h"; sourceTree = "<group>"; };
 		8EFA0CB71C8C2F6500BEF641 /* MyCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCheck.xcdatamodel; sourceTree = "<group>"; };
@@ -239,7 +243,6 @@
 				8E41320E1C8B0E6C00FDD0EF /* Register.storyboard */,
 				8E1171BF1C899134003806A5 /* LaunchScreen.storyboard */,
 				8E1171C21C899134003806A5 /* Info.plist */,
-				7CA4604C1C94E9EB00FF7F3A /* Images.xcassets */,
 			);
 			path = JibunKogitte;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				8E4132151C8BADBC00FDD0EF /* BaseViewController.swift */,
 				8E4132171C8C005600FDD0EF /* OAuthViewController.swift */,
 				8E91F8E61C917BB700C50086 /* RegisterSigniture.swift */,
+				8E7C7AB01C9FE02300A48E50 /* VerifyViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -298,6 +302,8 @@
 				8E4132111C8B19AC00FDD0EF /* BaseConnectionModel.swift */,
 				8E44C0E71C8C7C3900E9561A /* UserModel.swift */,
 				8E4A88F51C92DDEA00AA3A09 /* IssueCheckModel.swift */,
+				8E7C7AAA1C9FA2CD00A48E50 /* LoginModel.swift */,
+				8E7C7AAC1C9FB4BF00A48E50 /* VerityModel.swift */,
 			);
 			name = ConnectionModel;
 			sourceTree = "<group>";
@@ -416,7 +422,6 @@
 				7CA4602D1C94E35F00FF7F3A /* Icon-Small-40@2x.png in Resources */,
 				7CA460511C95124000FF7F3A /* signature.png in Resources */,
 				8E1171BE1C899134003806A5 /* Assets.xcassets in Resources */,
-				7CA4604D1C94E9EB00FF7F3A /* Images.xcassets in Resources */,
 				7CA460281C94E35F00FF7F3A /* Icon-60@2x.png in Resources */,
 				7C1FC5DA1C943593000AA71A /* checkyLogo@2x.png in Resources */,
 				7CA460471C94E48900FF7F3A /* iPhone6plus-5.5-Landscape.png in Resources */,
@@ -504,6 +509,7 @@
 			files = (
 				8E4132121C8B19AC00FDD0EF /* BaseConnectionModel.swift in Sources */,
 				8E91F8E71C917BB700C50086 /* RegisterSigniture.swift in Sources */,
+				8E7C7AAD1C9FB4BF00A48E50 /* VerityModel.swift in Sources */,
 				8EFA0CB81C8C2F6500BEF641 /* MyCheck.xcdatamodeld in Sources */,
 				8E41320D1C8B0BD700FDD0EF /* RegisterUserImageViewController.swift in Sources */,
 				8E4131FD1C8A8E4500FDD0EF /* MainViewController.swift in Sources */,
@@ -514,7 +520,9 @@
 				8E4132181C8C005600FDD0EF /* OAuthViewController.swift in Sources */,
 				8E41321A1C8C146300FDD0EF /* CommontProcess.swift in Sources */,
 				8E0F33641C8F29E700ADEF31 /* MyCheckViewController.swift in Sources */,
+				8E7C7AB11C9FE02300A48E50 /* VerifyViewController.swift in Sources */,
 				8E44C0E81C8C7C3900E9561A /* UserModel.swift in Sources */,
+				8E7C7AAB1C9FA2CD00A48E50 /* LoginModel.swift in Sources */,
 				8EFA0CBE1C8C306000BEF641 /* CoreDataManager.swift in Sources */,
 				8E4131FB1C8A8DE300FDD0EF /* CloudOceanNumericKeypadViewController.swift in Sources */,
 				8E4132161C8BADBC00FDD0EF /* BaseViewController.swift in Sources */,
@@ -640,14 +648,14 @@
 			baseConfigurationReference = 08D8B5C3DDA6020B6FB9B8C1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sachiko Kajishima (47AF7U98C2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JibunKogitte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koms.mycheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1617ae30-f97a-45e6-a68e-a16e33a9b897";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JibunKogitte/MyCheck-swift.h";
 			};
 			name = Debug;
@@ -657,14 +665,14 @@
 			baseConfigurationReference = 30A49C347E33D18C1F97B290 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sachiko Kajishima (47AF7U98C2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JibunKogitte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.koms.mycheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1617ae30-f97a-45e6-a68e-a16e33a9b897";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JibunKogitte/MyCheck-swift.h";
 			};
 			name = Release;
