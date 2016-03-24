@@ -139,7 +139,7 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
     
     @IBAction func pressCloseButton(sender: UIBarButtonItem) {
         // 前の画面に戻る
-        self.navigationController?.popViewControllerAnimated(false)
+        self.navigationController?.navigationBar.hidden = true;
     }
     
     override func viewDidLoad() {
@@ -241,12 +241,52 @@ class MyCheckViewController: BaseViewController, CloudOceanNumericKeypadDelegate
         print("reqParam = \(reqParam)")
         
         issueCheckModel.startConnection(reqParam) { (response,httpResponse, error) -> Void in
-            print("発行しました")
-            self.dispatch_async_main() {
-                self.issueIdLabel.text = response[IssueCheckModel.ResCheckId] as? String
-            }
-            print("response = \(response[IssueCheckModel.ResCheckId])")
+            
+            // エラーだった場合はOAuth画面に遷移するようにする
+            if error != nil {
+                self.dispatch_async_main() {
+                    self.navigationController?.popViewControllerAnimated(false)
+                    CommonProcess.clear()
 
+                }
+            } else {
+                // エラーだった場合
+                let errors = response["errors"]
+                if (errors != nil) {
+                    let msg = errors!["msg"] as? String
+                    
+                    if (msg != nil) {
+                        let errorMessageAlertController = UIAlertController(title: "エラー", message: msg!, preferredStyle: .Alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                        errorMessageAlertController.addAction(defaultAction)
+                        
+                        // エラーメッセージ表示
+                        self.dispatch_async_main() {
+                            self.presentViewController(errorMessageAlertController, animated: true, completion: nil)
+                        }
+                    }
+                    return;
+                   
+                }
+                // ステータスコードが200以外
+                if (httpResponse?.statusCode != 200) {
+                    let errorMessageAlertController = UIAlertController(title: "エラー", message: "エラーが発生しました", preferredStyle: .Alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    errorMessageAlertController.addAction(defaultAction)
+                    
+                    // エラーメッセージ表示
+                    self.dispatch_async_main() {
+                        self.presentViewController(errorMessageAlertController, animated: true, completion: nil)
+                    }
+                } else {
+                    print("発行しました")
+                    self.dispatch_async_main() {
+                        self.issueIdLabel.text = response[IssueCheckModel.ResCheckId] as? String
+                    }
+                    print("response = \(response[IssueCheckModel.ResCheckId])")
+                }
+                
+            }
         }
         
     }
